@@ -1,0 +1,26 @@
+---
+import ArticleCard from '../../components/ArticleCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedArticles } from '../../lib/articles';
+
+const articles = await getPublishedArticles();
+---
+
+<BaseLayout title="Articles" description="Every article in Field Notes, newest first.">
+  <header class="page-intro">
+    <p class="kicker">The archive</p>
+    <h1>All articles</h1>
+    <p>Ideas, working notes, and useful things collected over time.</p>
+  </header>
+
+  {articles.length > 0 ? (
+    <div class="article-grid archive-grid">
+      {articles.map((article) => <ArticleCard article={article} />)}
+    </div>
+  ) : (
+    <section class="empty-state compact">
+      <h2>No published articles yet.</h2>
+      <p>Check back soon.</p>
+    </section>
+  )}
+</BaseLayout>

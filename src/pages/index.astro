@@ -1,0 +1,50 @@
+---
+import ArticleCard from '../components/ArticleCard.astro';
+import { SITE_DESCRIPTION } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublishedArticles } from '../lib/articles';
+import { sitePath } from '../lib/paths';
+
+const articles = await getPublishedArticles();
+const [featured, ...moreArticles] = articles;
+---
+
+<BaseLayout>
+  <section class="hero">
+    <p class="kicker">Independent publishing, kept simple</p>
+    <h1>Notes for people<br />who pay attention.</h1>
+    <p class="hero-copy">{SITE_DESCRIPTION} Written in Markdown, kept in Git, and published as a fast static site.</p>
+    <a class="button" href={sitePath('/articles/')}>Browse all articles <span aria-hidden="true">&rarr;</span></a>
+  </section>
+
+  {featured ? (
+    <section class="section-block" aria-labelledby="latest-heading">
+      <div class="section-heading">
+        <p class="kicker">Latest dispatch</p>
+        <h2 id="latest-heading">Fresh from the notebook</h2>
+      </div>
+      <ArticleCard article={featured} featured />
+    </section>
+  ) : (
+    <section class="empty-state">
+      <p class="kicker">The notebook is open</p>
+      <h2>No published articles yet.</h2>
+      <p>Add a Markdown file to <code>src/content/articles</code> to publish the first one.</p>
+    </section>
+  )}
+
+  {moreArticles.length > 0 && (
+    <section class="section-block" aria-labelledby="more-heading">
+      <div class="section-heading inline">
+        <div>
+          <p class="kicker">Keep reading</p>
+          <h2 id="more-heading">More notes</h2>
+        </div>
+        <a href={sitePath('/articles/')}>View the archive <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="article-grid">
+        {moreArticles.slice(0, 4).map((article) => <ArticleCard article={article} />)}
+      </div>
+    </section>
+  )}
+</BaseLayout>

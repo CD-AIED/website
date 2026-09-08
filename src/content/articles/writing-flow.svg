@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Static publishing flow</title>
+  <desc id="desc">Markdown and image files pass through the build and become a static HTML page.</desc>
+  <rect width="1200" height="560" rx="8" fill="#19251f"/>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(78 132)">
+      <rect width="244" height="296" rx="5" fill="#f4f0e8"/>
+      <path d="M174 0v70h70" fill="#d8d9d0"/>
+      <text x="34" y="116" fill="#e8603c" font-family="monospace" font-size="46" font-weight="700">MD</text>
+      <rect x="34" y="156" width="161" height="10" fill="#526058"/>
+      <rect x="34" y="185" width="176" height="10" fill="#c9cec3"/>
+      <rect x="34" y="214" width="142" height="10" fill="#c9cec3"/>
+      <text x="122" y="341" fill="#f4f0e8" font-size="20" text-anchor="middle">WORDS + IMAGES</text>
+    </g>
+    <g transform="translate(478 168)">
+      <circle cx="100" cy="100" r="100" fill="#e8603c"/>
+      <path d="m63 71 74 29-74 29Z" fill="#19251f"/>
+      <text x="100" y="247" fill="#f4f0e8" font-size="20" text-anchor="middle">STATIC BUILD</text>
+    </g>
+    <g transform="translate(800 132)">
+      <rect width="322" height="236" rx="5" fill="#f4f0e8"/>
+      <rect x="26" y="24" width="270" height="28" fill="#385643"/>
+      <circle cx="43" cy="38" r="5" fill="#e8603c"/>
+      <rect x="34" y="85" width="176" height="16" fill="#19251f"/>
+      <rect x="34" y="120" width="250" height="7" fill="#c9cec3"/>
+      <rect x="34" y="141" width="222" height="7" fill="#c9cec3"/>
+      <rect x="34" y="179" width="92" height="28" fill="#e8603c"/>
+      <text x="161" y="289" fill="#f4f0e8" font-size="20" text-anchor="middle">HTML + CSS</text>
+    </g>
+    <path d="M354 280h82m-24-21 24 21-24 21M704 280h54m-24-21 24 21-24 21" fill="none" stroke="#8da092" stroke-width="6"/>
+  </g>
+</svg>

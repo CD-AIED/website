@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">The first page is always blank</title>
+  <desc id="desc">An abstract editorial composition with sheets of paper, type, lines, and an orange circle.</desc>
+  <rect width="1400" height="900" fill="#31483a"/>
+  <circle cx="1080" cy="186" r="132" fill="#e8603c"/>
+  <path d="M0 738 440 509l295 391H0Z" fill="#22352b"/>
+  <rect x="248" y="122" width="640" height="672" rx="4" fill="#f4f0e8" transform="rotate(-4 568 458)"/>
+  <rect x="331" y="202" width="162" height="17" fill="#19251f"/>
+  <rect x="331" y="247" width="394" height="8" fill="#c9cec3"/>
+  <rect x="331" y="274" width="338" height="8" fill="#c9cec3"/>
+  <rect x="331" y="367" width="449" height="8" fill="#c9cec3"/>
+  <rect x="331" y="394" width="407" height="8" fill="#c9cec3"/>
+  <rect x="331" y="421" width="431" height="8" fill="#c9cec3"/>
+  <text x="934" y="626" fill="#f4f0e8" font-family="Georgia, serif" font-size="98" letter-spacing="-4">begin.</text>
+  <text x="938" y="686" fill="#b9c4ba" font-family="monospace" font-size="19" letter-spacing="5">FIELD NOTE 001</text>
+  <path d="M1017 725h229" stroke="#e8603c" stroke-width="5"/>
+</svg>

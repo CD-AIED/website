@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sitePath } from '../lib/paths';
+---
+
+<BaseLayout title="Page not found" description="The requested page could not be found.">
+  <section class="not-found">
+    <p class="kicker">404 · Off the page</p>
+    <h1>There’s nothing written here.</h1>
+    <p>The page may have moved, or the link might be wrong.</p>
+    <a class="button" href={sitePath('/')}>Return home <span aria-hidden="true">&rarr;</span></a>
+  </section>
+</BaseLayout>

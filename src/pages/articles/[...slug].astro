@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import { render, type CollectionEntry } from 'astro:content';
+import { SITE_AUTHOR } from '../../consts';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedArticles, getReadingTime } from '../../lib/articles';
+import { sitePath } from '../../lib/paths';
+
+export async function getStaticPaths() {
+  const articles = await getPublishedArticles();
+
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const { title, description, pubDate, updatedDate, author, tags, cover, coverAlt } = article.data;
+---
+
+<BaseLayout title={title} description={description} image={cover?.src} article>
+  <article class="article-page">
+    <a class="back-link" href={sitePath('/articles/')}><span aria-hidden="true">&larr;</span> All articles</a>
+
+    <header class="article-header">
+      {tags.length > 0 && <p class="kicker">{tags.join(' · ')}</p>}
+      <h1>{title}</h1>
+      <p class="dek">{description}</p>
+      <div class="article-meta">
+        <span>By {author ?? SITE_AUTHOR}</span>
+        <span aria-hidden="true">/</span>
+        <time datetime={pubDate.toISOString()}>
+          {pubDate.toLocaleDateString('en', { month: 'long', day: 'numeric', year: 'numeric' })}
+        </time>
+        <span aria-hidden="true">/</span>
+        <span>{getReadingTime(article.body)} min read</span>
+      </div>
+    </header>
+
+    {cover && (
+      <figure class="article-cover">
+        <Image
+          src={cover}
+          alt={coverAlt ?? ''}
+          widths={[720, 1080, 1440]}
+          sizes="(max-width: 900px) 100vw, 1200px"
+          loading="eager"
+        />
+      </figure>
+    )}
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {updatedDate && (
+      <p class="updated-date">Last updated {updatedDate.toLocaleDateString('en', { month: 'long', day: 'numeric', year: 'numeric' })}.</p>
+    )}
+
+    <footer class="article-end">
+      <span aria-hidden="true">&sect;</span>
+      <p>That’s the note. Thanks for reading.</p>
+      <a href={sitePath('/articles/')}>Back to the archive</a>
+    </footer>
+  </article>
+</BaseLayout>

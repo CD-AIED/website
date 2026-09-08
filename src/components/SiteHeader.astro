@@ -1,0 +1,19 @@
+---
+import { SITE_TITLE } from '../consts';
+import { sitePath } from '../lib/paths';
+
+const pathname = Astro.url.pathname;
+const articlesPath = sitePath('/articles/');
+---
+
+<header class="site-header">
+  <a class="brand" href={sitePath('/')} aria-label={`${SITE_TITLE} home`}>
+    <span class="brand-mark" aria-hidden="true">FN</span>
+    <span>{SITE_TITLE}</span>
+  </a>
+
+  <nav aria-label="Primary navigation">
+    <a href={sitePath('/')} aria-current={pathname === sitePath('/') ? 'page' : undefined}>Home</a>
+    <a href={articlesPath} aria-current={pathname.startsWith(articlesPath) ? 'page' : undefined}>Articles</a>
+  </nav>
+</header>
