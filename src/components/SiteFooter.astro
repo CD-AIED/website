@@ -1,8 +1,9 @@
 ---
-import { SITE_AUTHOR } from '../consts';
+import { SITE_TITLE } from '../consts';
+import { sitePath } from '../lib/paths';
 ---
-
 <footer class="site-footer">
-  <p>Built with words, files, and version control.</p>
-  <p>&copy; {new Date().getFullYear()} {SITE_AUTHOR}</p>
+  <p><strong>{SITE_TITLE}</strong><br />A research group with roots in Bucharest.</p>
+  <nav aria-label="Footer navigation"><ul role="list"><li><a href={sitePath('/team/')}>Our team</a></li><li><a href={sitePath('/articles/')}>Articles</a></li><li><a href="#main-content">Back to top ↑</a></li></ul></nav>
+  <small>© {new Date().getFullYear()} {SITE_TITLE}</small>
 </footer>

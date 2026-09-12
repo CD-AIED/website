@@ -2,13 +2,13 @@
 title: "The first page is always blank"
 description: "A small beginning, and a practical guide to publishing the next article in this repository."
 pubDate: 2026-09-08
-author: "CD-AIED"
+authors: "researcher-01, researcher-02"
 tags:
   - Notes
   - Process
 cover: "./first-note-cover.svg"
 coverAlt: "An abstract editorial illustration of paper, type, and a bright orange circle"
-draft: false
+draft: true
 ---
 
 Every site starts the same way: an empty file, a blinking cursor, and too many possible directions. This one starts with a deliberately simple promise.
@@ -26,7 +26,7 @@ Create a Markdown file inside `src/content/articles`. Give it a short, URL-frien
 title: "My new article"
 description: "A one-sentence summary used on article cards and by search engines."
 pubDate: 2026-09-08
-author: "Your name"
+authors: "researcher-01, researcher-02"
 tags:
   - Design
   - Notes

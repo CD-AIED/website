@@ -1,52 +1,22 @@
 ---
 import { Image } from 'astro:assets';
-import type { Article } from '../lib/articles';
-import { getReadingTime } from '../lib/articles';
+import AuthorList from './AuthorList.astro';
+import { type Article, getReadingTime } from '../lib/articles';
+import { getArticleAuthors } from '../lib/researchers';
 import { sitePath } from '../lib/paths';
 
-interface Props {
-  article: Article;
-  featured?: boolean;
-}
-
-const { article, featured = false } = Astro.props;
+interface Props { article: Article; headingLevel?: 'h2' | 'h3' }
+const { article, headingLevel: Heading = 'h2' } = Astro.props;
 const { title, description, pubDate, tags, cover, coverAlt } = article.data;
-const articleUrl = sitePath(`/articles/${article.id}/`);
+const authors = await getArticleAuthors(article);
 ---
-
-<article class:list={['article-card', { featured, 'without-cover': !cover }]}>
-  {cover && (
-    <a class="card-image" href={articleUrl} tabindex="-1" aria-hidden="true">
-      <Image
-        src={cover}
-        alt={coverAlt ?? ''}
-        widths={[480, 760, 1120]}
-        sizes={featured ? '(max-width: 760px) 100vw, 60vw' : '(max-width: 760px) 100vw, 36vw'}
-        loading={featured ? 'eager' : 'lazy'}
-      />
-    </a>
-  )}
-
-  <div class="card-copy">
-    <div class="eyebrow">
-      <time datetime={pubDate.toISOString()}>
-        {pubDate.toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' })}
-      </time>
-      <span aria-hidden="true">/</span>
-      <span>{getReadingTime(article.body)} min read</span>
-    </div>
-
-    <h2><a href={articleUrl}>{title}</a></h2>
-    <p>{description}</p>
-
-    {tags.length > 0 && (
-      <ul class="tag-list" aria-label="Topics">
-        {tags.map((tag) => <li>{tag}</li>)}
-      </ul>
-    )}
-
-    <a class="read-link" href={articleUrl} aria-label={`Read ${title}`}>
-      Read article <span aria-hidden="true">&rarr;</span>
-    </a>
-  </div>
+<article class="article-card">
+  {cover && <Image class="card-cover" src={cover} alt={coverAlt ?? ''} widths={[480, 760]} sizes="(max-width: 600px) 100vw, 380px" loading="lazy" />}
+  <header>
+    <p class="meta"><time datetime={pubDate.toISOString()}>{pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}</time> · {getReadingTime(article.body)} min read</p>
+    <Heading><a href={sitePath(`/articles/${article.id}/`)}>{title}</a></Heading>
+    <p class="meta">By <AuthorList authors={authors} /></p>
+  </header>
+  <p>{description}</p>
+  {tags.length > 0 && <ul class="tag-list" aria-label="Topics" role="list">{tags.map((tag) => <li>{tag}</li>)}</ul>}
 </article>

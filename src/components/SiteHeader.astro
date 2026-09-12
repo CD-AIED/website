@@ -1,19 +1,21 @@
 ---
 import { SITE_TITLE } from '../consts';
 import { sitePath } from '../lib/paths';
-
 const pathname = Astro.url.pathname;
-const articlesPath = sitePath('/articles/');
+const links = [
+  { label: 'About', href: sitePath('/'), current: pathname === sitePath('/') },
+  { label: 'Research', href: sitePath('/#research') },
+  { label: 'Team', href: sitePath('/#team'), current: pathname.startsWith(sitePath('/team/')) || pathname.startsWith(sitePath('/researchers/')) },
+  { label: 'Publications', href: sitePath('/#publications') },
+  { label: 'Articles', href: sitePath('/articles/'), current: pathname.startsWith(sitePath('/articles/')) },
+];
 ---
-
 <header class="site-header">
   <a class="brand" href={sitePath('/')} aria-label={`${SITE_TITLE} home`}>
-    <span class="brand-mark" aria-hidden="true">FN</span>
-    <span>{SITE_TITLE}</span>
+    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 3h9v9H3zm13 13h9v9h-9z" fill="currentColor"/><path d="M16 3h9v9h-9zM3 16h9v9H3z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    {SITE_TITLE}
   </a>
-
-  <nav aria-label="Primary navigation">
-    <a href={sitePath('/')} aria-current={pathname === sitePath('/') ? 'page' : undefined}>Home</a>
-    <a href={articlesPath} aria-current={pathname.startsWith(articlesPath) ? 'page' : undefined}>Articles</a>
+  <nav aria-label="Main navigation">
+    <ul role="list">{links.map((link) => <li><a href={link.href} aria-current={link.current ? 'page' : undefined}>{link.label}</a></li>)}</ul>
   </nav>
 </header>

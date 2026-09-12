@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import { type Researcher, fullName, researcherPhoto } from '../lib/researchers';
+import { sitePath } from '../lib/paths';
+
+interface Props { person: Researcher; headingLevel?: 'h2' | 'h3' }
+const { person, headingLevel: Heading = 'h3' } = Astro.props;
+const { username, role, affiliation, summary, placeholder } = person.data;
+---
+<article class="person-card">
+  <Image class="portrait" src={researcherPhoto(username)} alt="" widths={[320, 640]} sizes="(max-width: 600px) 100vw, 360px" loading="lazy" />
+  <header>
+    {placeholder && <small class="label">Sample profile</small>}
+    <Heading><a href={sitePath(`/researchers/${username}/`)}>{fullName(person)}</a></Heading>
+    {role && <p class="person-role">{role}</p>}
+    {affiliation && <p class="muted">{affiliation}</p>}
+  </header>
+  {summary && <p>{summary}</p>}
+</article>

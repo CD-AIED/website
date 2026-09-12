@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getResearchers, fullName, researcherPhoto, type Researcher } from '../../lib/researchers';
+import { getPublishedArticles } from '../../lib/articles';
+import { sitePath } from '../../lib/paths';
+
+export async function getStaticPaths() {
+  return (await getResearchers()).map((person) => ({ params: { username: person.data.username }, props: { person } }));
+}
+interface Props { person: Researcher }
+const { person } = Astro.props;
+const { Content } = await render(person);
+const { username, role, affiliation, summary, website, placeholder } = person.data;
+const articles = (await getPublishedArticles()).filter((article) => article.data.authors.some((author) => author.id === person.id));
+---
+<BaseLayout title={fullName(person)} description={summary ?? `${fullName(person)} — researcher profile at CD-AIED.`}>
+  <a class="back-link" href={sitePath('/team/')}>← All team members</a>
+  <article class="profile">
+    <header class="profile-header">
+      <Image class="portrait" src={researcherPhoto(username)} alt="" width={480} loading="eager" />
+      <div>
+        {placeholder && <p class="label">Sample profile</p>}
+        <h1>{fullName(person)}</h1>
+        {role && <p class="person-role">{role}</p>}
+        {affiliation && <p>{affiliation}</p>}
+        {website && <a href={website}>Personal website <span aria-hidden="true">↗</span></a>}
+      </div>
+    </header>
+    <div class="prose"><Content /></div>
+  </article>
+  {articles.length > 0 && (
+    <section class="section" aria-labelledby="author-articles">
+      <h2 id="author-articles">Articles by {fullName(person)}</h2>
+      <ul class="article-grid" role="list">
+        {articles.map((article) => <li><ArticleCard article={article} headingLevel="h3" /></li>)}
+      </ul>
+    </section>
+  )}
+</BaseLayout>

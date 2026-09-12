@@ -1,7 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import { render, type CollectionEntry } from 'astro:content';
-import { SITE_AUTHOR } from '../../consts';
+import AuthorList from '../../components/AuthorList.astro';
+import { getArticleAuthors } from '../../lib/researchers';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPublishedArticles, getReadingTime } from '../../lib/articles';
 import { sitePath } from '../../lib/paths';
@@ -21,7 +22,8 @@ interface Props {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
-const { title, description, pubDate, updatedDate, author, tags, cover, coverAlt } = article.data;
+const { title, description, pubDate, updatedDate, tags, cover, coverAlt } = article.data;
+const authors = await getArticleAuthors(article);
 ---
 
 <BaseLayout title={title} description={description} image={cover?.src} article>
@@ -33,10 +35,10 @@ const { title, description, pubDate, updatedDate, author, tags, cover, coverAlt 
       <h1>{title}</h1>
       <p class="dek">{description}</p>
       <div class="article-meta">
-        <span>By {author ?? SITE_AUTHOR}</span>
+        <span>By <AuthorList authors={authors} /></span>
         <span aria-hidden="true">/</span>
         <time datetime={pubDate.toISOString()}>
-          {pubDate.toLocaleDateString('en', { month: 'long', day: 'numeric', year: 'numeric' })}
+          {pubDate.toLocaleDateString('en-GB', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
         </time>
         <span aria-hidden="true">/</span>
         <span>{getReadingTime(article.body)} min read</span>
@@ -60,13 +62,11 @@ const { title, description, pubDate, updatedDate, author, tags, cover, coverAlt 
     </div>
 
     {updatedDate && (
-      <p class="updated-date">Last updated {updatedDate.toLocaleDateString('en', { month: 'long', day: 'numeric', year: 'numeric' })}.</p>
+      <p class="updated-date">Last updated {updatedDate.toLocaleDateString('en-GB', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}.</p>
     )}
 
     <footer class="article-end">
-      <span aria-hidden="true">&sect;</span>
-      <p>That’s the note. Thanks for reading.</p>
-      <a href={sitePath('/articles/')}>Back to the archive</a>
+      <a href={sitePath('/articles/')}>← All articles</a>
     </footer>
   </article>
 </BaseLayout>

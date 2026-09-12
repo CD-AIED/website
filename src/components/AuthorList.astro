@@ -1,0 +1,17 @@
+---
+import { SITE_AUTHOR } from '../consts';
+import type { Researcher } from '../lib/researchers';
+import { fullName } from '../lib/researchers';
+import { sitePath } from '../lib/paths';
+
+interface Props { authors: Researcher[] }
+const { authors } = Astro.props;
+---
+<span class="authors">
+  {authors.length ? authors.map((person, index) => (
+    <Fragment>
+      {index > 0 && ', '}
+      <a href={sitePath(`/researchers/${person.data.username}/`)} rel="author">{fullName(person)}</a>
+    </Fragment>
+  )) : SITE_AUTHOR}
+</span>

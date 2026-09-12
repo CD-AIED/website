@@ -6,17 +6,17 @@ import { getPublishedArticles } from '../../lib/articles';
 const articles = await getPublishedArticles();
 ---
 
-<BaseLayout title="Articles" description="Every article in Field Notes, newest first.">
+<BaseLayout title="Articles" description="Notes, research updates, and articles from CD-AIED, newest first.">
   <header class="page-intro">
-    <p class="kicker">The archive</p>
+    <p class="label">Notes & updates</p>
     <h1>All articles</h1>
     <p>Ideas, working notes, and useful things collected over time.</p>
   </header>
 
   {articles.length > 0 ? (
-    <div class="article-grid archive-grid">
-      {articles.map((article) => <ArticleCard article={article} />)}
-    </div>
+    <ul class="article-grid" role="list">
+      {articles.map((article) => <li><ArticleCard article={article} /></li>)}
+    </ul>
   ) : (
     <section class="empty-state compact">
       <h2>No published articles yet.</h2>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResearcherCard from '../components/ResearcherCard.astro';
+import { getResearchers } from '../lib/researchers';
+const people = await getResearchers();
+---
+<BaseLayout title="Team" description="Meet the researchers in CD-AIED.">
+  <header class="page-intro">
+    <p class="label">The people</p>
+    <h1>Our team</h1>
+    <p>A group that began at the University of Bucharest, with room for new people and perspectives.</p>
+  </header>
+  <ul class="people-grid" role="list">
+    {people.map((person) => <li><ResearcherCard person={person} headingLevel="h2" /></li>)}
+  </ul>
+  {!people.length && <p>Team profiles will be added soon.</p>}
+</BaseLayout>

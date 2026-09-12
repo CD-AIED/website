@@ -1,0 +1,77 @@
+---
+import ResearcherCard from './ResearcherCard.astro';
+import type { Researcher } from '../lib/researchers';
+import { sitePath } from '../lib/paths';
+
+interface Props { people: Researcher[] }
+const { people } = Astro.props;
+---
+<section id="team" class="section" aria-labelledby="team-heading" data-carousel>
+  <header class="section-heading">
+    <div>
+      <p class="label">The people</p>
+      <h2 id="team-heading">Meet the team</h2>
+    </div>
+    <a href={sitePath('/team/')}>View everyone <span aria-hidden="true">↗</span></a>
+  </header>
+  <p class="section-intro">Different perspectives, a shared interest in research. Get to know the people behind the work.</p>
+  {people.length > 0 ? (
+    <Fragment>
+      <div class="carousel-toolbar">
+        <p id="team-help" class="muted">Scroll to explore, or focus the list and use the arrow keys.</p>
+        <div class="carousel-controls" hidden>
+          <span class="carousel-status" role="status" aria-live="polite" aria-atomic="true"></span>
+          <button type="button" data-direction="-1" aria-label="Previous team members" aria-controls="team-list">←</button>
+          <button type="button" data-direction="1" aria-label="Next team members" aria-controls="team-list">→</button>
+        </div>
+      </div>
+      <ul id="team-list" class="team-carousel" role="list" tabindex="0" aria-label="Team members" aria-describedby="team-help">
+        {people.map((person) => <li><ResearcherCard person={person} /></li>)}
+      </ul>
+    </Fragment>
+  ) : <p class="muted">Team profiles will be added soon.</p>}
+</section>
+
+<script>
+  const carousel = document.querySelector<HTMLElement>('[data-carousel]');
+  const list = carousel?.querySelector<HTMLUListElement>('.team-carousel');
+  const controls = carousel?.querySelector<HTMLElement>('.carousel-controls');
+  if (list && controls) {
+    const cards = Array.from(list.children) as HTMLElement[];
+    const buttons = controls.querySelectorAll<HTMLButtonElement>('button');
+    const status = controls.querySelector<HTMLElement>('[role="status"]')!;
+    const stride = () => cards.length > 1
+      ? cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left
+      : cards[0].getBoundingClientRect().width;
+    const visibleCount = () => Math.max(1, Math.round(list.clientWidth / stride()));
+    const first = () => Math.round(list.scrollLeft / stride());
+    const update = () => {
+      const start = first();
+      const end = Math.min(cards.length, start + visibleCount());
+      const message = `${start + 1}–${end} of ${cards.length}`;
+      if (status.textContent !== message) status.textContent = message;
+      buttons[0].setAttribute('aria-disabled', String(list.scrollLeft <= 1));
+      buttons[1].setAttribute('aria-disabled', String(list.scrollLeft + list.clientWidth >= list.scrollWidth - 1));
+      controls.hidden = list.scrollWidth <= list.clientWidth + 1;
+    };
+    const goTo = (index: number) => {
+      list.scrollTo({ left: Math.max(0, Math.min(index, cards.length - visibleCount())) * stride(), behavior: 'instant' });
+    };
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      if (button.getAttribute('aria-disabled') === 'true') return;
+      goTo(first() + Number(button.dataset.direction) * visibleCount());
+    }));
+    list.addEventListener('keydown', (event) => {
+      if (event.target !== list || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      const destinations: Record<string, number> = {
+        ArrowLeft: first() - 1, ArrowRight: first() + 1, Home: 0, End: cards.length,
+      };
+      if (!(event.key in destinations)) return;
+      event.preventDefault();
+      goTo(destinations[event.key]);
+    });
+    list.addEventListener('scroll', update, { passive: true });
+    new ResizeObserver(update).observe(list);
+    update();
+  }
+</script>
