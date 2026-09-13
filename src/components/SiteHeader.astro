@@ -6,7 +6,6 @@ const links = [
   { label: 'About', href: sitePath('/'), current: pathname === sitePath('/') },
   { label: 'Research', href: sitePath('/#research') },
   { label: 'Team', href: sitePath('/#team'), current: pathname.startsWith(sitePath('/team/')) || pathname.startsWith(sitePath('/researchers/')) },
-  { label: 'Publications', href: sitePath('/#publications') },
   { label: 'Articles', href: sitePath('/articles/'), current: pathname.startsWith(sitePath('/articles/')) },
 ];
 ---

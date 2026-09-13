@@ -1,0 +1,49 @@
+.muted,
+.meta,
+.sample-note {
+  color: var(--muted);
+}
+
+.meta,
+.sample-note {
+  font-size: 0.8rem;
+}
+
+.label,
+.kicker {
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding-block: 0.5rem;
+  font-size: 0.85rem;
+
+  @media print {
+    display: none;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  background: var(--accent);
+  border-radius: 0.2rem;
+  color: white;
+}

@@ -1,0 +1,91 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/mixins";
+
+.carousel-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-block: 1.5rem;
+
+  p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  button {
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    background: var(--surface);
+    font-size: 1.25rem;
+
+    &:hover {
+      background: var(--tint);
+    }
+
+    &[aria-disabled="true"] {
+      border-color: var(--line);
+      color: var(--muted);
+      cursor: default;
+
+      @media (forced-colors: active) {
+        color: GrayText;
+        border-color: GrayText;
+      }
+    }
+  }
+}
+
+.carousel-status {
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+// Native scrolling works before or without the JavaScript controls.
+.team-carousel {
+  @include mixins.unstyled-list;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3rem) / 3);
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  scrollbar-color: #8fa8b0 var(--tint);
+
+  > li {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    grid-auto-columns: calc((100% - 1.5rem) / 2);
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    grid-auto-columns: 100%;
+  }
+
+  @media print {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
+  }
+}

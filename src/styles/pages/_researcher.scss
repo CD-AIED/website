@@ -1,0 +1,31 @@
+@use "../abstracts/breakpoints";
+
+.profile {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-block: 3rem;
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    .portrait {
+      max-width: 12rem;
+    }
+  }
+}

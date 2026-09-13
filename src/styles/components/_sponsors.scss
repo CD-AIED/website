@@ -1,0 +1,65 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/mixins";
+
+.sponsor-list {
+  @include mixins.unstyled-list;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding-block: 1rem;
+
+  @media (max-width: breakpoints.$mobile) {
+    gap: 1rem;
+
+    li {
+      flex: 1 1 calc(50% - 1rem);
+      min-width: 0;
+    }
+  }
+}
+
+.sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 13rem;
+  min-height: 4rem;
+  text-decoration: none;
+
+  @media (max-width: breakpoints.$mobile) {
+    width: 100%;
+  }
+}
+
+// The logo's alpha channel supplies the shape; the site palette supplies its color.
+// The asset URL and original aspect ratio are set in the sponsor markup.
+.sponsor-logo {
+  display: block;
+  width: min(100%, 13rem);
+  aspect-ratio: var(--sponsor-ratio);
+  background-color: var(--accent);
+  mask: var(--sponsor-logo) center / contain no-repeat;
+  -webkit-mask: var(--sponsor-logo) center / contain no-repeat;
+}
+
+.sponsor-placeholder {
+  color: var(--muted);
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  .sponsor-logo {
+    width: 2.5rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    gap: 0.4rem;
+    font-size: 0.9rem;
+
+    .sponsor-logo {
+      width: 1.8rem;
+    }
+  }
+}

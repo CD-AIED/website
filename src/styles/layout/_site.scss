@@ -1,0 +1,127 @@
+@use "../abstracts/breakpoints";
+
+body > header,
+main,
+body > footer {
+  width: min(72rem, calc(100% - 3rem));
+  margin-inline: auto;
+
+  @media (max-width: breakpoints.$mobile) {
+    width: calc(100% - 2rem);
+  }
+
+  @media print {
+    width: 100%;
+  }
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 4rem;
+}
+
+// The navigation wraps naturally on small screens.
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.65rem;
+  border-bottom: 1px solid var(--line);
+
+  @media (max-width: breakpoints.$mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-block: 1.2rem 0.75rem;
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-shrink: 0;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+
+  svg {
+    color: var(--accent);
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: inline-block;
+    padding-block: 0.5rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-decoration: none;
+
+    &:hover,
+    &[aria-current="page"] {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    ul {
+      gap: 0.15rem 1.2rem;
+    }
+
+    a {
+      padding-block: 0.6rem;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-top: 1px solid var(--line);
+  padding-block: 2rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+
+  p {
+    margin: 0;
+  }
+
+  strong {
+    color: var(--ink);
+  }
+
+  small {
+    font-size: 0.75rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

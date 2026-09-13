@@ -1,0 +1,128 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/mixins";
+
+.welcome {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding-block: 5rem;
+
+  .label {
+    color: var(--accent);
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    gap: 2rem;
+    padding-block: 3.5rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    grid-template-columns: 1fr;
+    padding-block: 2.75rem;
+    gap: 2rem;
+  }
+
+  @media print {
+    display: block;
+    padding-block: 1rem;
+  }
+}
+
+.lead {
+  max-width: 43rem;
+  margin-bottom: 1.65rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.welcome-note {
+  padding: 1.9rem;
+  border-left: 2px solid #aac3c9;
+  background: var(--tint);
+  border-radius: 0 0.4rem 0.4rem 0;
+
+  h2 {
+    max-width: 15ch;
+    font-size: 1.35rem;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    padding: 1.4rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    h2 {
+      max-width: none;
+    }
+  }
+}
+
+.note-mark {
+  display: block;
+  margin-bottom: 1.8rem;
+  color: var(--accent);
+  font-size: 1.8rem;
+  line-height: 1;
+
+  @media (max-width: breakpoints.$mobile) {
+    margin-bottom: 1rem;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.interest-list {
+  @include mixins.unstyled-list;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+
+  li {
+    padding-right: 1rem;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.interest-number {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+
+  @media (max-width: breakpoints.$mobile) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: breakpoints.$tablet) {
+  .desktop-break {
+    display: none;
+  }
+}

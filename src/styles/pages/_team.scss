@@ -1,0 +1,18 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/mixins";
+
+.people-grid {
+  @include mixins.unstyled-list;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  @media (max-width: breakpoints.$tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    grid-template-columns: 1fr;
+  }
+}

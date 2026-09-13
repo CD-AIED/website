@@ -1,0 +1,23 @@
+// A square wrapper crops the image into a circle without stretching it.
+.portrait {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #e8eeef;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+}
+
+li:nth-child(3n + 2) .portrait {
+  background: #eeeee7;
+}
+
+li:nth-child(3n + 3) .portrait {
+  background: #e7edeb;
+}

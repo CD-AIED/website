@@ -1,16 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
 import TeamCarousel from '../components/TeamCarousel.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import { group, sponsors, projects, publications } from '../data/group';
+import { group, sponsors } from '../data/group';
 import { getResearchers } from '../lib/researchers';
 import { getPublishedArticles } from '../lib/articles';
 import { sitePath } from '../lib/paths';
 
 const people = await getResearchers();
 const articles = await getPublishedArticles();
-const recentPublications = [...publications].sort((a, b) => b.year - a.year).slice(0, 5);
 ---
 <BaseLayout>
   <section class="welcome" aria-labelledby="welcome-heading">
@@ -46,32 +44,6 @@ const recentPublications = [...publications].sort((a, b) => b.year - a.year).sli
 
   <TeamCarousel people={people} />
 
-  <div class="work-grid">
-    <section id="projects" class="section" aria-labelledby="projects-heading">
-      <header class="section-heading"><div><p class="label">What we’re working on</p><h2 id="projects-heading">Projects</h2></div></header>
-      {projects.length ? (
-        <ul class="work-list" role="list">
-          {projects.map((project) => <li><h3>{project.url ? <a href={project.url}>{project.title}</a> : project.title}</h3><p>{project.description}</p></li>)}
-        </ul>
-      ) : <p class="muted">We’re getting started. Our projects will appear here as the work takes shape.</p>}
-    </section>
-    <section id="publications" class="section" aria-labelledby="publications-heading">
-      <header class="section-heading"><div><p class="label">From the group</p><h2 id="publications-heading">Recent publications</h2></div></header>
-      {recentPublications.length ? (
-        <ol class="work-list" role="list">
-          {recentPublications.map((publication) => (
-            <li>
-              <p class="label">{publication.venue} · {publication.year}</p>
-              <h3><a href={publication.url}>{publication.title}</a></h3>
-              <p>{publication.authors}</p>
-              {publication.abstract && <details><summary>Abstract</summary><p>{publication.abstract}</p></details>}
-            </li>
-          ))}
-        </ol>
-      ) : <p class="muted">Papers and other research outputs will be collected here. More to share soon.</p>}
-    </section>
-  </div>
-
   <section id="sponsors" class="section sponsors" aria-labelledby="sponsors-heading">
     <header class="section-heading">
       <div><p class="label">Supporting the work</p><h2 id="sponsors-heading">Sponsors</h2></div>
@@ -82,7 +54,13 @@ const recentPublications = [...publications].sort((a, b) => b.year - a.year).sli
         const Tag = sponsor.url ? 'a' : 'span';
         return <li>
           <Tag class:list={['sponsor', { 'sponsor-placeholder': sponsor.placeholder }]} href={sponsor.url} aria-label={sponsor.url ? sponsor.name : undefined}>
-            <Image src={sponsor.logo} width={Math.min(sponsor.logo.width, 208)} densities={[1, 2]} alt={sponsor.placeholder ? '' : sponsor.name} loading="lazy" />
+            <span
+              class="sponsor-logo"
+              role="img"
+              aria-label={sponsor.url ? undefined : sponsor.name}
+              aria-hidden={sponsor.url ? 'true' : undefined}
+              style={`--sponsor-logo: url("${sponsor.logo.src}"); --sponsor-ratio: ${sponsor.logo.width} / ${sponsor.logo.height}`}
+            ></span>
             {sponsor.placeholder && <span>{sponsor.name}</span>}
           </Tag>
         </li>;

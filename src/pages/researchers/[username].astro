@@ -20,7 +20,9 @@ const articles = (await getPublishedArticles()).filter((article) => article.data
   <a class="back-link" href={sitePath('/team/')}>← All team members</a>
   <article class="profile">
     <header class="profile-header">
-      <Image class="portrait" src={researcherPhoto(username)} alt="" width={480} loading="eager" />
+      <div class="portrait">
+        <Image src={researcherPhoto(username)} alt="" width={480} loading="eager" />
+      </div>
       <div>
         {placeholder && <p class="label">Sample profile</p>}
         <h1>{fullName(person)}</h1>

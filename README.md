@@ -1,6 +1,6 @@
 # CD-AIED
 
-A research-group website built with Astro, plain CSS, and Markdown, deployed to GitHub Pages.
+A research-group website built with Astro, SCSS, and Markdown, deployed to GitHub Pages.
 
 Every article is compiled ahead of time into HTML. The published site does not render Markdown in the browser and requires no server or database.
 
@@ -129,8 +129,31 @@ The workflow at `.github/workflows/deploy.yml` checks and builds the site, then 
 
 The current deployment URL is configured as <https://cd-aied.github.io/website/> in `astro.config.mjs`. Update `site` and remove `base` there before moving to a custom domain.
 
+## Styles
+
+Edit the SCSS in `src/styles/`. `main.scss` is the entry point imported by `BaseLayout.astro`; it assembles the partials with `@use`. Astro compiles it during development and produces minified CSS in `dist/` for production.
+
+```text
+src/styles/
+  main.scss              # Stylesheet entry point and load order
+  abstracts/             # Shared breakpoints and mixins (no CSS output)
+  base/                  # Palette, typography, element defaults, accessibility
+  layout/                # Site header/footer and shared section layouts
+  components/            # Cards, portraits, carousel, sponsors, Markdown prose
+  pages/                 # Home, team, researcher, article, archive, and 404
+```
+
+Keep each declaration on its own line, use shallow nesting, and keep responsive and print rules beside the styles they affect. Add page-specific styling under `pages/` and reusable component styling under `components/`, then load new partials from `main.scss`.
+
+```bash
+npm run format:styles  # Format all SCSS files
+npm run check:styles   # Check SCSS formatting
+```
+
 ## Customize
 
 - Site title, description, and author: `src/consts.ts`
-- Colors and typography: `src/styles/global.css`
+- Colors: `src/styles/base/_theme.scss`
+- Typography: `src/styles/base/_elements.scss`
+- Component and page styles: `src/styles/components/` and `src/styles/pages/`
 - GitHub Pages URL/base path: `astro.config.mjs`

@@ -1,5 +1,5 @@
 import type { ImageMetadata } from 'astro';
-import sponsorMark from '../assets/images/sponsors/placeholder.svg';
+import togetherAiLogo from '../assets/images/sponsors/together-ai.svg';
 
 // Replace the sample research topics when the group's focus is confirmed.
 export const group = {
@@ -21,10 +21,7 @@ export interface Sponsor {
 }
 // Generic placeholders, not real endorsements. Import actual local logos above.
 export const sponsors: Sponsor[] = [
-  { name: 'Sponsor 01', logo: sponsorMark, placeholder: true },
-  { name: 'Sponsor 02', logo: sponsorMark, placeholder: true },
-  { name: 'Sponsor 03', logo: sponsorMark, placeholder: true },
-  { name: 'Sponsor 04', logo: sponsorMark, placeholder: true },
+  { name: 'Together AI', logo: togetherAiLogo, url: 'https://www.together.ai/' },
 ];
 
 export interface Project {

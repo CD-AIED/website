@@ -1,0 +1,77 @@
+// Markdown content in articles and researcher biographies.
+.prose {
+  width: min(100%, 46rem);
+  margin-inline: auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+
+  h2,
+  h3,
+  h4 {
+    margin-block: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  li + li {
+    margin-top: 0.4rem;
+  }
+
+  img {
+    max-height: 40rem;
+    width: auto;
+    margin: 2rem auto;
+  }
+
+  blockquote {
+    margin: 2rem 0;
+    padding: 0.5rem 1.5rem;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  pre {
+    padding: 1.25rem;
+    overflow-x: auto;
+    border-radius: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  :not(pre) > code {
+    padding: 0.15em 0.3em;
+    background: var(--tint);
+    font-size: 0.88em;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--line);
+    text-align: left;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin-block: 2rem;
+  }
+}

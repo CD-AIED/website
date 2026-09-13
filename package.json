@@ -7,13 +7,17 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "format:styles": "prettier --write \"src/styles/**/*.scss\"",
+    "check:styles": "prettier --check \"src/styles/**/*.scss\""
   },
   "dependencies": {
     "astro": "^7.3.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "prettier": "^3.9.6",
+    "sass": "^1.104.1",
     "typescript": "^6.0.3"
   },
   "engines": {
