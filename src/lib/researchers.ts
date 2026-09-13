@@ -1,6 +1,6 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
-import placeholder from '../assets/images/researchers/placeholder.svg';
+import defaultAvatar from '../assets/images/researchers/default-avatar.svg';
 
 export type Researcher = CollectionEntry<'researchers'>;
 const photos = import.meta.glob<{ default: ImageMetadata }>(
@@ -15,7 +15,7 @@ export function researcherPhoto(username: string) {
     const photo = photos[`../assets/images/researchers/${username}.${extension}`];
     if (photo) return photo.default;
   }
-  return placeholder;
+  return defaultAvatar;
 }
 
 export async function getResearchers() {

@@ -5,18 +5,39 @@ import { type Article, getReadingTime } from '../lib/articles';
 import { getArticleAuthors } from '../lib/researchers';
 import { sitePath } from '../lib/paths';
 
-interface Props { article: Article; headingLevel?: 'h2' | 'h3' }
+interface Props {
+  article: Article;
+  headingLevel?: 'h2' | 'h3';
+}
+
 const { article, headingLevel: Heading = 'h2' } = Astro.props;
 const { title, description, pubDate, tags, cover, coverAlt } = article.data;
 const authors = await getArticleAuthors(article);
 ---
 <article class="article-card">
-  {cover && <Image class="card-cover" src={cover} alt={coverAlt ?? ''} widths={[480, 760]} sizes="(max-width: 600px) 100vw, 380px" loading="lazy" />}
+  {cover && (
+    <Image
+      class="card-cover"
+      src={cover}
+      alt={coverAlt ?? ''}
+      width={768}
+      widths={[480, 768, 1152, 1536]}
+      sizes="(max-width: 600px) calc(100vw - 2rem), (max-width: 816px) calc(100vw - 3rem), 768px"
+      loading="lazy"
+    />
+  )}
   <header>
-    <p class="meta"><time datetime={pubDate.toISOString()}>{pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}</time> · {getReadingTime(article.body)} min read</p>
     <Heading><a href={sitePath(`/articles/${article.id}/`)}>{title}</a></Heading>
-    <p class="meta">By <AuthorList authors={authors} /></p>
   </header>
-  <p>{description}</p>
+  {description && <p>{description}</p>}
+  <footer class="article-card-meta">
+    <p class="meta">
+      <time datetime={pubDate.toISOString()}>
+        {pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}
+      </time>
+      · {getReadingTime(article.body)} min read
+    </p>
+    <p class="meta article-card-authors">By <AuthorList authors={authors} /></p>
+  </footer>
   {tags.length > 0 && <ul class="tag-list" aria-label="Topics" role="list">{tags.map((tag) => <li>{tag}</li>)}</ul>}
 </article>

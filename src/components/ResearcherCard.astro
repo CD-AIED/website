@@ -5,21 +5,20 @@ import { sitePath } from '../lib/paths';
 
 interface Props { person: Researcher; headingLevel?: 'h2' | 'h3' }
 const { person, headingLevel: Heading = 'h3' } = Astro.props;
-const { username, role, affiliation, summary, placeholder } = person.data;
+const { username, role, affiliation, summary } = person.data;
 ---
 <article class="person-card">
   <header>
     <div class="person-heading">
       <div class="portrait">
-        <Image src={researcherPhoto(username)} alt="" widths={[96, 192]} sizes="3.25rem" loading="lazy" />
+        <Image src={researcherPhoto(username)} alt="" widths={[160, 320]} sizes="5rem" loading="lazy" />
       </div>
       <div>
-        {placeholder && <small class="label">Sample profile</small>}
         <Heading><a href={sitePath(`/researchers/${username}/`)}>{fullName(person)}</a></Heading>
+        {role && <p class="person-role">{role}</p>}
+        {affiliation && <p class="muted">{affiliation}</p>}
       </div>
     </div>
-    {role && <p class="person-role">{role}</p>}
-    {affiliation && <p class="muted">{affiliation}</p>}
   </header>
   {summary && <p>{summary}</p>}
 </article>

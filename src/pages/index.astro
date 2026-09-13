@@ -29,7 +29,6 @@ const articles = await getPublishedArticles();
   <section id="research" class="section" aria-labelledby="research-heading">
     <header class="section-heading">
       <div><p class="label">What we’re curious about</p><h2 id="research-heading">Research interests</h2></div>
-      {group.researchIsPlaceholder && <small class="sample-note">Sample topics · to be confirmed</small>}
     </header>
     <ul class="interest-list" role="list">
       {group.interests.map((interest, index) => (
@@ -47,21 +46,19 @@ const articles = await getPublishedArticles();
   <section id="sponsors" class="section sponsors" aria-labelledby="sponsors-heading">
     <header class="section-heading">
       <div><p class="label">Supporting the work</p><h2 id="sponsors-heading">Sponsors</h2></div>
-      {sponsors.some((sponsor) => sponsor.placeholder) && <small class="sample-note">Example marks · not endorsements</small>}
     </header>
     <ul class="sponsor-list" role="list">
       {sponsors.map((sponsor) => {
         const Tag = sponsor.url ? 'a' : 'span';
         return <li>
-          <Tag class:list={['sponsor', { 'sponsor-placeholder': sponsor.placeholder }]} href={sponsor.url} aria-label={sponsor.url ? sponsor.name : undefined}>
+          <Tag class="sponsor" href={sponsor.url} aria-label={sponsor.url ? sponsor.name : undefined}>
             <span
               class="sponsor-logo"
               role="img"
-              aria-label={sponsor.url ? undefined : sponsor.name}
+              aria-label={!sponsor.url ? sponsor.name : undefined}
               aria-hidden={sponsor.url ? 'true' : undefined}
               style={`--sponsor-logo: url("${sponsor.logo.src}"); --sponsor-ratio: ${sponsor.logo.width} / ${sponsor.logo.height}`}
             ></span>
-            {sponsor.placeholder && <span>{sponsor.name}</span>}
           </Tag>
         </li>;
       })}
@@ -75,7 +72,7 @@ const articles = await getPublishedArticles();
         <div><p class="label">Notes & updates</p><h2 id="articles-heading">From the notebook</h2></div>
         <a href={sitePath('/articles/')}>All articles <span aria-hidden="true">↗</span></a>
       </header>
-      <ul class="article-grid" role="list">
+      <ul class="article-list" role="list">
         {articles.slice(0, 3).map((article) => <li><ArticleCard article={article} headingLevel="h3" /></li>)}
       </ul>
     </section>

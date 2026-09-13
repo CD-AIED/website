@@ -13,7 +13,6 @@ const researchers = defineCollection({
     summary: z.string().optional(),
     website: z.url().optional(),
     order: z.number().default(100),
-    placeholder: z.boolean().default(false),
   }),
 });
 

@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 interface Props { person: Researcher }
 const { person } = Astro.props;
 const { Content } = await render(person);
-const { username, role, affiliation, summary, website, placeholder } = person.data;
+const { username, role, affiliation, summary, website } = person.data;
 const articles = (await getPublishedArticles()).filter((article) => article.data.authors.some((author) => author.id === person.id));
 ---
 <BaseLayout title={fullName(person)} description={summary ?? `${fullName(person)} — researcher profile at CD-AIED.`}>
@@ -24,7 +24,6 @@ const articles = (await getPublishedArticles()).filter((article) => article.data
         <Image src={researcherPhoto(username)} alt="" width={480} loading="eager" />
       </div>
       <div>
-        {placeholder && <p class="label">Sample profile</p>}
         <h1>{fullName(person)}</h1>
         {role && <p class="person-role">{role}</p>}
         {affiliation && <p>{affiliation}</p>}
@@ -34,10 +33,14 @@ const articles = (await getPublishedArticles()).filter((article) => article.data
     <div class="prose"><Content /></div>
   </article>
   {articles.length > 0 && (
-    <section class="section" aria-labelledby="author-articles">
+    <section class="section profile-articles" aria-labelledby="author-articles">
       <h2 id="author-articles">Articles by {fullName(person)}</h2>
-      <ul class="article-grid" role="list">
-        {articles.map((article) => <li><ArticleCard article={article} headingLevel="h3" /></li>)}
+      <ul class="article-list" role="list">
+        {articles.map((article) => (
+          <li>
+            <ArticleCard article={article} headingLevel="h3" />
+          </li>
+        ))}
       </ul>
     </section>
   )}

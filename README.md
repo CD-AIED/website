@@ -73,7 +73,7 @@ Write the biography in Markdown.
 Describe their interests and link to selected work.
 ```
 
-Only `username`, `firstName`, and `lastName` are required. Optional fields are `role`, `affiliation`, `summary`, `website` (full URL), `order` (defaults to 100), and `placeholder` (defaults to false). Profiles are sorted by `order`, then full name. Affiliation is per person, so researchers can belong to any institution.
+Only `username`, `firstName`, and `lastName` are required. Optional fields are `role`, `affiliation`, `summary`, `website` (full URL), and `order` (defaults to 100). Profiles are sorted by `order`, then full name. Affiliation is per person, so researchers can belong to any institution.
 
 The filename and username must match. Use lowercase letters, numbers, and hyphens. The profile URL is `/website/researchers/alice/`.
 
@@ -81,7 +81,7 @@ Add their photo at **`src/assets/images/researchers/alice.jpg`**. `.jpeg`, `.png
 
 The same profile supplies the homepage carousel, full-team listing, profile page, and article bylines. Their published articles automatically appear on their profile.
 
-The five `researcher-0N.md` files are labelled samples: replace them and remove `placeholder: true` when adding real people. If you rename a username, update its article references in the same commit.
+If you rename a username, update its article references in the same commit.
 
 ## Article images
 
@@ -95,7 +95,7 @@ Local images inside `src/` are handled by Astro's image pipeline. Relative paths
 
 ## Homepage content
 
-Edit **`src/data/group.ts`** for the welcome text, research interests, projects, publications, and sponsors. Set `researchIsPlaceholder: false` when the real topics are ready.
+Edit **`src/data/group.ts`** for the welcome text, research interests, projects, publications, and sponsors.
 
 For sponsor logos, import local assets and add entries such as:
 
@@ -107,7 +107,7 @@ export const sponsors: Sponsor[] = [
 ];
 ```
 
-Use the actual sponsor name for accessibility. The current marks are generic examples, not real endorsements. Replace or remove them. Logos preserve their aspect ratios and wrap on smaller screens.
+Use the actual sponsor name for accessibility. Logos preserve their aspect ratios and wrap on smaller screens.
 
 Projects accept `title`, `description`, and an optional `url`. Publications accept `title`, `authors` (display text), `venue`, `year`, `url`, and an optional `abstract`. The homepage shows the five most recent publications, sorted by year. Abstracts use native `details`/`summary` controls. Both lists start empty.
 
@@ -118,6 +118,8 @@ The carousel shows three people on desktop, two on tablets, and one on phones. I
 Focus the list to use Left/Right, Home, and End. Tab reaches individual profile links and scrolls them into view. Previous/Next buttons retain focus at the ends and announce their disabled state. Without JavaScript, buttons stay hidden and native scrolling remains available. Printing expands the list.
 
 Navigation uses lists of real links, with visible focus rings, a skip link, and natural tab order. Keep descriptive link text, alt text, and readable contrast when adding content.
+
+Article lists stack vertically in a centered, 48rem-wide column on the homepage, archive, and researcher profiles. Each card has a compact cover, a left-aligned title, and its date and authors below the description. The homepage shows the latest three; the archive and researcher profiles list all matching published articles. Pagination is not implemented yet.
 
 ## Publish
 

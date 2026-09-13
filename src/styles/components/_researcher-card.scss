@@ -29,12 +29,6 @@
     }
   }
 
-  .label {
-    display: block;
-    margin-bottom: 0.55rem;
-    font-size: 0.62rem;
-  }
-
   > p {
     padding: 0.6rem 1.2rem 1.25rem;
     margin: 0;
@@ -58,8 +52,8 @@
   min-width: 0;
 
   .portrait {
-    flex: 0 0 3.25rem;
-    width: 3.25rem;
+    flex: 0 0 5rem;
+    width: 5rem;
   }
 
   > div:last-child {

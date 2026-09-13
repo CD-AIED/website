@@ -1,6 +1,7 @@
 @use "../abstracts/breakpoints";
 
-.profile {
+.profile,
+.profile-articles {
   max-width: 48rem;
   margin-inline: auto;
 }

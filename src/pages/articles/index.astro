@@ -14,7 +14,7 @@ const articles = await getPublishedArticles();
   </header>
 
   {articles.length > 0 ? (
-    <ul class="article-grid" role="list">
+    <ul class="article-list" role="list">
       {articles.map((article) => <li><ArticleCard article={article} /></li>)}
     </ul>
   ) : (
