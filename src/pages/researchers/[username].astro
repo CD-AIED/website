@@ -5,7 +5,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { getResearchers, fullName, researcherPhoto, type Researcher } from '../../lib/researchers';
 import { getPublishedArticles } from '../../lib/articles';
-import { sitePath } from '../../lib/paths';
 
 export async function getStaticPaths() {
   return (await getResearchers()).map((person) => ({ params: { username: person.data.username }, props: { person } }));
@@ -17,7 +16,6 @@ const { username, role, affiliation, summary, website } = person.data;
 const articles = (await getPublishedArticles()).filter((article) => article.data.authors.some((author) => author.id === person.id));
 ---
 <BaseLayout title={fullName(person)} description={summary ?? `${fullName(person)} — researcher profile at CD-AIED.`}>
-  <a class="back-link" href={sitePath('/team/')}>← All team members</a>
   <article class="profile">
     <header class="profile-header">
       <div class="portrait">

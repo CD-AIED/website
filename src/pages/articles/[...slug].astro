@@ -5,7 +5,6 @@ import AuthorList from '../../components/AuthorList.astro';
 import { getArticleAuthors } from '../../lib/researchers';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPublishedArticles, getReadingTime } from '../../lib/articles';
-import { sitePath } from '../../lib/paths';
 
 export async function getStaticPaths() {
   const articles = await getPublishedArticles();
@@ -28,8 +27,6 @@ const authors = await getArticleAuthors(article);
 
 <BaseLayout title={title} description={description} image={cover?.src} article>
   <article class="article-page">
-    <a class="back-link" href={sitePath('/articles/')}><span aria-hidden="true">&larr;</span> All articles</a>
-
     <header class="article-header">
       {tags.length > 0 && <p class="kicker">{tags.join(' · ')}</p>}
       <h1>{title}</h1>
@@ -65,8 +62,5 @@ const authors = await getArticleAuthors(article);
       <p class="updated-date">Last updated {updatedDate.toLocaleDateString('en-GB', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}.</p>
     )}
 
-    <footer class="article-end">
-      <a href={sitePath('/articles/')}>← All articles</a>
-    </footer>
   </article>
 </BaseLayout>

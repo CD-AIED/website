@@ -1,6 +1,6 @@
 @use "../abstracts/mixins";
 
-// Shared by the homepage, article archive, and researcher profiles.
+// Shared by the homepage and researcher profiles.
 .article-list {
   @include mixins.unstyled-list;
 

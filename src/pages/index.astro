@@ -5,7 +5,6 @@ import ArticleCard from '../components/ArticleCard.astro';
 import { group, sponsors } from '../data/group';
 import { getResearchers } from '../lib/researchers';
 import { getPublishedArticles } from '../lib/articles';
-import { sitePath } from '../lib/paths';
 
 const people = await getResearchers();
 const articles = await getPublishedArticles();
@@ -70,7 +69,6 @@ const articles = await getPublishedArticles();
     <section class="section" aria-labelledby="articles-heading">
       <header class="section-heading">
         <div><p class="label">Notes & updates</p><h2 id="articles-heading">From the notebook</h2></div>
-        <a href={sitePath('/articles/')}>All articles <span aria-hidden="true">↗</span></a>
       </header>
       <ul class="article-list" role="list">
         {articles.slice(0, 3).map((article) => <li><ArticleCard article={article} headingLevel="h3" /></li>)}
