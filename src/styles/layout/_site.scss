@@ -49,8 +49,10 @@ main {
   letter-spacing: -0.035em;
   text-decoration: none;
 
-  svg {
-    color: var(--accent);
+  img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
   }
 }
 
@@ -68,7 +70,7 @@ nav {
     display: inline-block;
     padding-block: 0.5rem;
     color: var(--muted);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     text-decoration: none;
 
     &:hover,
@@ -114,10 +116,6 @@ nav {
 
   small {
     font-size: 0.75rem;
-  }
-
-  nav ul {
-    gap: 1rem;
   }
 
   @media (max-width: breakpoints.$mobile) {

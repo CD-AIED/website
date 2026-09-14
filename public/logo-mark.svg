@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="827.65442"
+   height="722.27271"
+   viewBox="0 0 827.65442 722.27271"
+   role="img"
+   aria-labelledby="logo-mark-title logo-mark-description"
+   version="1.1"
+   id="svg228"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <title
+     id="logo-mark-title">AIED logo mark</title>
+  <desc
+     id="logo-mark-description">A navy A frames a hand-drawn domed university building, crossed by a gold orbit and four-point star.</desc>
+  <defs
+     id="defs52">
+    <!-- Palette and line weights. Change these classes to recolour the drawing. -->
+    <style
+       id="style1">
+      .navy { fill: #032448; }
+      .paper { fill: #fff; }
+      .stone { fill: #f6f9fa; }
+      .shade { fill: #d2e0e7; }
+      .deep-shade { fill: #a8bfcd; }
+      .outline { stroke: #153a58; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+      .detail { fill: none; stroke: #244b66; stroke-width: 1.35; stroke-linejoin: round; stroke-linecap: round; }
+      .fine { fill: none; stroke: #6f8c9f; stroke-width: 1; stroke-linejoin: round; stroke-linecap: round; }
+      .highlight { fill: none; stroke: #fff; stroke-width: 1.7; stroke-linecap: round; }
+      .type { fill: #032448; font-family: 'Times New Roman', 'Liberation Serif', 'Nimbus Roman', serif; }
+    </style>
+    <linearGradient
+       id="gold-ribbon"
+       gradientUnits="userSpaceOnUse"
+       x1="215"
+       y1="618"
+       x2="1028"
+       y2="335">
+      <stop
+         offset="0"
+         stop-color="#c5983c"
+         id="stop1" />
+      <stop
+         offset=".12"
+         stop-color="#edcd7c"
+         id="stop2" />
+      <stop
+         offset=".29"
+         stop-color="#c99535"
+         id="stop3" />
+      <stop
+         offset=".57"
+         stop-color="#d8aa50"
+         id="stop4" />
+      <stop
+         offset=".73"
+         stop-color="#f0cf80"
+         id="stop5" />
+      <stop
+         offset=".88"
+         stop-color="#ce9d3e"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#c79736"
+         id="stop7" />
+    </linearGradient>
+    <linearGradient
+       id="gold-star"
+       gradientUnits="userSpaceOnUse"
+       x1="886"
+       y1="229"
+       x2="972"
+       y2="302">
+      <stop
+         stop-color="#e6ba5e"
+         id="stop8" />
+      <stop
+         offset=".5"
+         stop-color="#d2a045"
+         id="stop9" />
+      <stop
+         offset="1"
+         stop-color="#c4983c"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="dome-metal"
+       gradientUnits="userSpaceOnUse"
+       x1="492"
+       y1="454"
+       x2="717"
+       y2="454">
+      <stop
+         stop-color="#b8ccd8"
+         id="stop11" />
+      <stop
+         offset=".4"
+         stop-color="#dce7ec"
+         id="stop12" />
+      <stop
+         offset="1"
+         stop-color="#a3bfce"
+         id="stop13" />
+    </linearGradient>
+    <linearGradient
+       id="building-fade"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="713"
+       x2="0"
+       y2="803">
+      <stop
+         stop-color="#fff"
+         id="stop14" />
+      <stop
+         offset=".45"
+         stop-color="#eee"
+         id="stop15" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop16" />
+    </linearGradient>
+    <mask
+       id="soft-building-base"
+       maskUnits="userSpaceOnUse"
+       x="370"
+       y="245"
+       width="450"
+       height="532">
+      <rect
+         x="370"
+         y="245"
+         width="450"
+         height="532"
+         fill="url(#building-fade)"
+         id="rect16" />
+    </mask>
+    <!-- One deliberately drawn, tapered ribbon; also reused for the clear space. -->
+    <path
+       id="orbit-ribbon"
+       d="m 544,394 c -130,56 -246,128 -306,187 -27,28 -37,58 -24,84 21,48 93,60 176,46 175,-27 372,-111 526,-209 66,-44 110,-103 112,-146 2,-35 -22,-58 -65,-63 37,17 52,44 38,79 -21,58 -115,125 -225,184 -150,76 -315,141 -442,140 -55,0 -90,-11 -101,-33 -18,-29 15,-73 77,-126 65,-57 147,-104 234,-143 z" />
+    <mask
+       id="orbit-clear-space"
+       maskUnits="userSpaceOnUse"
+       x="180"
+       y="45"
+       width="890"
+       height="750">
+      <rect
+         x="180"
+         y="45"
+         width="890"
+         height="750"
+         fill="#ffffff"
+         id="rect17" />
+      <use
+         xlink:href="#orbit-ribbon"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="16"
+         stroke-linejoin="round"
+         id="use17" />
+    </mask>
+    <!-- Reusable architectural parts. Coordinates are local to each component. -->
+    <g
+       id="arched-window">
+      <path
+         d="M 0,68 V 21 C 0,9 8,0 18,0 28,0 36,9 36,21 v 47 z"
+         class="stone outline"
+         id="path17" />
+      <path
+         d="M 5,67 V 22 C 5,12 10,6 18,6 c 8,0 13,6 13,16 v 45 z"
+         class="navy"
+         id="path18" />
+      <g
+         stroke="#b8cbd6"
+         stroke-width="1.2"
+         fill="none"
+         id="g25">
+        <line
+           x1="18"
+           y1="7"
+           x2="18"
+           y2="67"
+           id="line18" />
+        <line
+           x1="11"
+           y1="10"
+           x2="11"
+           y2="67"
+           id="line19" />
+        <line
+           x1="25"
+           y1="10"
+           x2="25"
+           y2="67"
+           id="line20" />
+        <line
+           x1="6"
+           y1="22"
+           x2="30"
+           y2="22"
+           id="line21" />
+        <line
+           x1="6"
+           y1="31"
+           x2="30"
+           y2="31"
+           id="line22" />
+        <line
+           x1="6"
+           y1="40"
+           x2="30"
+           y2="40"
+           id="line23" />
+        <line
+           x1="6"
+           y1="49"
+           x2="30"
+           y2="49"
+           id="line24" />
+        <line
+           x1="6"
+           y1="58"
+           x2="30"
+           y2="58"
+           id="line25" />
+      </g>
+      <path
+         d="m -3,68 h 42 v 5 H -3 Z"
+         class="stone outline"
+         id="path25" />
+      <line
+         x1="1"
+         y1="70"
+         x2="35"
+         y2="70"
+         class="fine"
+         id="line26" />
+    </g>
+    <g
+       id="lower-window">
+      <path
+         d="M 0,75 V 8 Q 24,-7 48,8 v 67 z"
+         class="stone outline"
+         id="path26" />
+      <path
+         d="M 7,74 V 13 Q 24,3 41,13 v 61 z"
+         class="navy"
+         id="path27" />
+      <g
+         fill="none"
+         stroke="#c7d7df"
+         stroke-width="1.8"
+         id="g31">
+        <line
+           x1="24"
+           y1="9"
+           x2="24"
+           y2="73"
+           id="line27" />
+        <line
+           x1="8"
+           y1="32"
+           x2="40"
+           y2="32"
+           id="line28" />
+        <line
+           x1="8"
+           y1="52"
+           x2="40"
+           y2="52"
+           id="line29" />
+        <line
+           x1="16"
+           y1="11"
+           x2="16"
+           y2="73"
+           id="line30" />
+        <line
+           x1="32"
+           y1="11"
+           x2="32"
+           y2="73"
+           id="line31" />
+      </g>
+      <rect
+         x="-3"
+         y="75"
+         width="54"
+         height="6"
+         class="stone outline"
+         id="rect31" />
+      <line
+         x1="1"
+         y1="78"
+         x2="47"
+         y2="78"
+         class="fine"
+         id="line32" />
+    </g>
+    <g
+       id="baluster">
+      <rect
+         x="-1.7"
+         y="0"
+         width="3.4000001"
+         height="1.5"
+         fill="#31516a"
+         id="rect32" />
+      <ellipse
+         cx="0"
+         cy="4.3000002"
+         rx="1.45"
+         ry="2.4000001"
+         fill="#31516a"
+         id="ellipse32" />
+      <rect
+         x="-0.75"
+         y="6"
+         width="1.5"
+         height="3"
+         fill="#31516a"
+         id="rect33" />
+      <rect
+         x="-1.7"
+         y="9"
+         width="3.4000001"
+         height="1.4"
+         fill="#31516a"
+         id="rect34" />
+    </g>
+    <g
+       id="balustrade">
+      <rect
+         x="0"
+         y="0"
+         width="54"
+         height="18"
+         class="stone outline"
+         id="rect35" />
+      <line
+         x1="3"
+         y1="4"
+         x2="51"
+         y2="4"
+         class="fine"
+         id="line35" />
+      <g
+         transform="translate(7,4)"
+         id="g42">
+        <use
+           xlink:href="#baluster"
+           id="use35" />
+        <use
+           xlink:href="#baluster"
+           x="5.6999998"
+           id="use36" />
+        <use
+           xlink:href="#baluster"
+           x="11.4"
+           id="use37" />
+        <use
+           xlink:href="#baluster"
+           x="17.1"
+           id="use38" />
+        <use
+           xlink:href="#baluster"
+           x="22.799999"
+           id="use39" />
+        <use
+           xlink:href="#baluster"
+           x="28.5"
+           id="use40" />
+        <use
+           xlink:href="#baluster"
+           x="34.200001"
+           id="use41" />
+        <use
+           xlink:href="#baluster"
+           x="39.900002"
+           id="use42" />
+      </g>
+      <rect
+         x="-3"
+         y="-3"
+         width="60"
+         height="4"
+         class="stone outline"
+         id="rect42" />
+      <rect
+         x="-3"
+         y="18"
+         width="60"
+         height="4"
+         class="stone outline"
+         id="rect43" />
+    </g>
+    <g
+       id="dentil">
+      <path
+         d="M -2,0 H 2 L 2.7,5 1,7 H -1 L -2.7,5 Z"
+         fill="#d9e5eb"
+         id="path43" />
+      <line
+         x1="-0.40000001"
+         y1="1"
+         x2="-0.40000001"
+         y2="4.5"
+         class="fine"
+         id="line43" />
+    </g>
+    <g
+       id="oculus">
+      <path
+         d="m 0,-14 q 3,0 4,3 7,1 8,7 4,2 1,6 -2,8 -9,9 -3,5 -7,1 -8,-1 -9,-8 -4,-3 0,-7 1,-7 8,-8 1,-3 4,-3 z"
+         class="stone outline"
+         id="path44" />
+      <circle
+         cx="0"
+         cy="0"
+         r="9.1999998"
+         class="navy"
+         id="circle44" />
+      <path
+         d="M 0,-6 5,0 0,6 -5,0 Z"
+         fill="none"
+         stroke="#dbe7ed"
+         stroke-width="1.1"
+         id="path45" />
+      <g
+         stroke="#dbe7ed"
+         stroke-width="1"
+         id="g48">
+        <line
+           x1="0"
+           y1="-10"
+           x2="0"
+           y2="-6"
+           id="line45" />
+        <line
+           x1="6"
+           y1="0"
+           x2="10"
+           y2="0"
+           id="line46" />
+        <line
+           x1="0"
+           y1="6"
+           x2="0"
+           y2="10"
+           id="line47" />
+        <line
+           x1="-10"
+           y1="0"
+           x2="-6"
+           y2="0"
+           id="line48" />
+      </g>
+    </g>
+    <g
+       id="pilaster">
+      <rect
+         x="0"
+         y="0"
+         width="21"
+         height="79"
+         class="stone outline"
+         id="rect48" />
+      <line
+         x1="4"
+         y1="5"
+         x2="4"
+         y2="75"
+         class="fine"
+         id="line49" />
+      <line
+         x1="17"
+         y1="5"
+         x2="17"
+         y2="75"
+         class="fine"
+         id="line50" />
+      <polygon
+         points="23,0 25,-6 22,-10 -1,-10 -4,-6 -2,0 "
+         class="stone outline"
+         id="polygon50" />
+      <line
+         x1="-1"
+         y1="-5"
+         x2="22"
+         y2="-5"
+         class="detail"
+         id="line51" />
+      <rect
+         x="-2"
+         y="76"
+         width="25"
+         height="6"
+         class="stone outline"
+         id="rect51" />
+    </g>
+    <g
+       id="roof-finial">
+      <path
+         d="M -7,8 V 2 l 3,-2 v -5 q 4,-6 8,0 v 5 l 3,2 v 6 z"
+         class="stone outline"
+         id="path51" />
+      <line
+         x1="0"
+         y1="-4"
+         x2="0"
+         y2="4"
+         class="detail"
+         id="line52" />
+    </g>
+    <g
+       id="scroll-bracket">
+      <path
+         d="M -5,0 H 5 L 4,7 Q 1,8 2,12 -3,13 -3,8 Z"
+         class="shade outline"
+         id="path52" />
+      <circle
+         cx="0"
+         cy="5"
+         r="1.5"
+         fill="#ffffff"
+         id="circle52" />
+    </g>
+    <linearGradient
+       xlink:href="#dome-metal"
+       id="linearGradient1"
+       gradientUnits="userSpaceOnUse"
+       x1="492"
+       y1="454"
+       x2="717"
+       y2="454" />
+    <linearGradient
+       xlink:href="#dome-metal"
+       id="linearGradient2"
+       gradientUnits="userSpaceOnUse"
+       x1="492"
+       y1="454"
+       x2="717"
+       y2="454" />
+    <linearGradient
+       xlink:href="#gold-star"
+       id="linearGradient3"
+       gradientUnits="userSpaceOnUse"
+       x1="886"
+       y1="229"
+       x2="972"
+       y2="302" />
+    <linearGradient
+       xlink:href="#gold-star"
+       id="linearGradient4"
+       gradientUnits="userSpaceOnUse"
+       x1="886"
+       y1="229"
+       x2="972"
+       y2="302" />
+  </defs>
+  <!-- The white background is a separate, removable object. -->
+  <g
+     id="emblem"
+     transform="translate(-208.34561,-54.727273)">
+    <g
+       id="monogram-and-architecture"
+       mask="url(#orbit-clear-space)">
+      <!-- Custom A without a crossbar: one simple contour, not outlined type. -->
+      <path
+         id="monogram-a"
+         class="navy"
+         d="m 624,57 q 3,-5 6,1 l 312,619 c 32,66 53,84 94,93 v 6 H 797 v -6 c 45,-10 59,-23 45,-61 L 608,192 361,682 c -19,44 -7,77 49,88 v 6 H 215 v -6 c 45,-13 58,-41 84,-89 z" />
+      <g
+         id="university-building"
+         mask="url(#soft-building-base)"
+         stroke-linejoin="round"
+         stroke-linecap="round">
+        <title
+           id="title52">Domed university building — editable architectural components</title>
+        <!-- Lower façade: a central bay and two receding wings. -->
+        <g
+           id="lower-facade">
+          <polygon
+             points="644,591 800,659 800,784 408,784 408,662 573,591 "
+             class="stone outline"
+             id="polygon52" />
+          <polygon
+             points="573,784 408,784 408,662 573,591 "
+             fill="#f0f5f7"
+             id="polygon53" />
+          <polygon
+             points="800,784 644,784 644,591 800,659 "
+             fill="#edf3f6"
+             id="polygon54" />
+          <rect
+             x="572"
+             y="604"
+             width="73"
+             height="180"
+             fill="#ffffff"
+             id="rect54" />
+          <g
+             id="facade-masonry"
+             class="fine">
+            <polyline
+               points="411,672 573,606 644,606 798,673"
+               id="polyline54" />
+            <polyline
+               points="411,694 573,628 644,628 798,695"
+               id="polyline55" />
+            <line
+               x1="421"
+               y1="677"
+               x2="421"
+               y2="782"
+               id="line55" />
+            <line
+               x1="431"
+               y1="673"
+               x2="431"
+               y2="782"
+               id="line56" />
+            <line
+               x1="481"
+               y1="652"
+               x2="481"
+               y2="783"
+               id="line57" />
+            <line
+               x1="491"
+               y1="648"
+               x2="491"
+               y2="783"
+               id="line58" />
+            <line
+               x1="543"
+               y1="627"
+               x2="543"
+               y2="784"
+               id="line59" />
+            <line
+               x1="555"
+               y1="622"
+               x2="555"
+               y2="784"
+               id="line60" />
+            <line
+               x1="661"
+               y1="621"
+               x2="661"
+               y2="784"
+               id="line61" />
+            <line
+               x1="672"
+               y1="626"
+               x2="672"
+               y2="784"
+               id="line62" />
+            <line
+               x1="716"
+               y1="645"
+               x2="716"
+               y2="784"
+               id="line63" />
+            <line
+               x1="725"
+               y1="649"
+               x2="725"
+               y2="784"
+               id="line64" />
+            <line
+               x1="773"
+               y1="669"
+               x2="773"
+               y2="784"
+               id="line65" />
+            <line
+               x1="783"
+               y1="674"
+               x2="783"
+               y2="784"
+               id="line66" />
+          </g>
+          <g
+             id="first-floor-windows">
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.55,-0.23,0,0.88,444,684)"
+               id="use66" />
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.76,-0.23,0,0.96,497,654)"
+               id="use67" />
+            <use
+               xlink:href="#lower-window"
+               transform="translate(582,623)"
+               id="use68" />
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.61,0.25,0,0.91,677,642)"
+               id="use69" />
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.55,0.25,0,0.85,735,674)"
+               id="use70" />
+          </g>
+          <g
+             id="first-floor-balconies">
+            <use
+               xlink:href="#balustrade"
+               transform="matrix(0.53,-0.23,0,0.8,443,753)"
+               id="use71" />
+            <use
+               xlink:href="#balustrade"
+               transform="matrix(0.74,-0.23,0,0.9,496,728)"
+               id="use72" />
+            <use
+               xlink:href="#balustrade"
+               transform="translate(581,704)"
+               id="use73" />
+            <use
+               xlink:href="#balustrade"
+               transform="matrix(0.61,0.25,0,0.9,674,713)"
+               id="use74" />
+            <use
+               xlink:href="#balustrade"
+               transform="matrix(0.55,0.25,0,0.8,733,741)"
+               id="use75" />
+          </g>
+          <g
+             id="ground-floor-windows">
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.65,-0.23,0,0.98,501,753)"
+               id="use76" />
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.92,0,0,1,584,744)"
+               id="use77" />
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.56,0.24,0,0.96,678,746)"
+               id="use78" />
+            <use
+               xlink:href="#lower-window"
+               transform="matrix(0.48,0.22,0,0.9,738,776)"
+               id="use79" />
+          </g>
+          <g
+             id="balcony-brackets">
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.85,0,0,0.85,584,734)"
+               id="use80" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.8,0,0,0.8,607,734)"
+               id="use81" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.85,0,0,0.85,632,734)"
+               id="use82" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,500,750)"
+               id="use83" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,535,740)"
+               id="use84" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,679,738)"
+               id="use85" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,705,748)"
+               id="use86" />
+          </g>
+          <g
+             id="lower-pilasters"
+             class="stone outline">
+            <polygon
+               points="429,784 413,784 413,670 429,663 "
+               id="polygon86" />
+            <polygon
+               points="490,784 475,784 475,644 490,638 "
+               id="polygon87" />
+            <polygon
+               points="564,784 544,784 544,615 564,607 "
+               id="polygon88" />
+            <polygon
+               points="670,784 650,784 650,607 670,615 "
+               id="polygon89" />
+            <polygon
+               points="731,784 715,784 715,635 731,642 "
+               id="polygon90" />
+            <polygon
+               points="793,784 777,784 777,663 793,670 "
+               id="polygon91" />
+          </g>
+          <g
+             id="pilaster-fluting"
+             class="fine">
+            <line
+               x1="418"
+               y1="681"
+               x2="418"
+               y2="784"
+               id="line91" />
+            <line
+               x1="425"
+               y1="678"
+               x2="425"
+               y2="784"
+               id="line92" />
+            <line
+               x1="480"
+               y1="655"
+               x2="480"
+               y2="784"
+               id="line93" />
+            <line
+               x1="486"
+               y1="652"
+               x2="486"
+               y2="784"
+               id="line94" />
+            <line
+               x1="549"
+               y1="630"
+               x2="549"
+               y2="784"
+               id="line95" />
+            <line
+               x1="560"
+               y1="626"
+               x2="560"
+               y2="784"
+               id="line96" />
+            <line
+               x1="655"
+               y1="626"
+               x2="655"
+               y2="784"
+               id="line97" />
+            <line
+               x1="666"
+               y1="630"
+               x2="666"
+               y2="784"
+               id="line98" />
+            <line
+               x1="720"
+               y1="650"
+               x2="720"
+               y2="784"
+               id="line99" />
+            <line
+               x1="727"
+               y1="653"
+               x2="727"
+               y2="784"
+               id="line100" />
+            <line
+               x1="782"
+               y1="681"
+               x2="782"
+               y2="784"
+               id="line101" />
+            <line
+               x1="789"
+               y1="684"
+               x2="789"
+               y2="784"
+               id="line102" />
+          </g>
+          <g
+             id="facade-capitals"
+             class="stone outline">
+            <polygon
+               points="492,641 474,649 477,653 491,647 491,652 476,658 471,655 473,634 492,626 "
+               id="polygon102" />
+            <polygon
+               points="566,620 545,624 546,630 565,626 565,633 546,636 540,632 542,607 566,603 "
+               id="polygon103" />
+            <polygon
+               points="673,633 652,625 652,631 672,639 668,643 649,635 650,603 673,612 "
+               id="polygon104" />
+            <polygon
+               points="733,652 716,645 716,651 732,658 729,662 713,655 713,627 733,636 "
+               id="polygon105" />
+            <polygon
+               points="797,682 779,674 779,681 797,689 793,693 776,685 775,655 797,665 "
+               id="polygon106" />
+          </g>
+        </g>
+        <g
+           id="upper-side-wings">
+          <g
+             id="west-wing">
+            <polygon
+               points="493,610 414,647 415,584 493,548 "
+               class="stone outline"
+               id="polygon107" />
+            <path
+               d="m 432,552 q 7,-23 49,-36 l 14,-1 -5,28 -63,31 z"
+               class="shade outline"
+               id="path107" />
+            <path
+               d="m 439,548 q 9,-16 41,-26 l -3,16 z"
+               class="stone outline"
+               id="path108" />
+            <polyline
+               points="435,550 481,529 480,535 439,554"
+               class="detail"
+               id="polyline108" />
+            <polygon
+               points="493,540 425,571 427,562 491,533 "
+               class="stone outline"
+               id="polygon108" />
+            <polygon
+               points="493,553 416,588 417,580 491,546 "
+               class="stone outline"
+               id="polygon109" />
+            <line
+               x1="419"
+               y1="591"
+               x2="488"
+               y2="560"
+               class="detail"
+               id="line109" />
+            <use
+               xlink:href="#arched-window"
+               transform="matrix(0.64,-0.28,0,0.82,447,575)"
+               id="use109" />
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(0.55,-0.25,0,0.64,418,594)"
+               id="use110" />
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(0.6,-0.25,0,0.66,478,568)"
+               id="use111" />
+          </g>
+          <g
+             id="east-wing">
+            <polygon
+               points="786,645 717,610 716,548 783,581 "
+               class="stone outline"
+               id="polygon111" />
+            <path
+               d="m 716,515 q 30,7 41,26 l -2,13 -37,-16 z"
+               class="shade outline"
+               id="path111" />
+            <path
+               d="m 722,522 q 20,5 29,18 l -28,-9 z"
+               class="stone outline"
+               id="path112" />
+            <polygon
+               points="756,559 718,542 718,535 756,553 "
+               class="stone outline"
+               id="polygon112" />
+            <polygon
+               points="786,588 718,558 718,550 784,581 "
+               class="stone outline"
+               id="polygon113" />
+            <use
+               xlink:href="#arched-window"
+               transform="matrix(0.62,0.29,0,0.8,737,574)"
+               id="use113" />
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(0.58,0.25,0,0.68,719,569)"
+               id="use114" />
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(0.52,0.25,0,0.66,771,595)"
+               id="use115" />
+          </g>
+        </g>
+        <g
+           id="main-cornice">
+          <polygon
+             points="574,570 641,570 673,577 800,645 813,662 644,591 574,591 381,674 393,646 542,576 "
+             class="stone outline"
+             id="polygon115" />
+          <polygon
+             points="643,587 808,660 807,667 643,596 574,596 385,679 387,671 574,587 "
+             class="navy"
+             id="polygon116" />
+          <polyline
+             points="382,671 573,586 644,586 813,661"
+             class="detail"
+             id="polyline116" />
+          <polyline
+             points="384,681 574,598 644,598 808,670"
+             class="detail"
+             id="polyline117" />
+          <polyline
+             points="397,644 543,577 574,572 641,572 672,579 799,646"
+             class="highlight"
+             id="polyline118" />
+          <g
+             id="cornice-dentils">
+            <g
+               transform="rotate(-24,1772.8465,-613.98297)"
+               id="g137">
+              <use
+                 xlink:href="#dentil"
+                 id="use118" />
+              <use
+                 xlink:href="#dentil"
+                 x="9"
+                 id="use119" />
+              <use
+                 xlink:href="#dentil"
+                 x="18"
+                 id="use120" />
+              <use
+                 xlink:href="#dentil"
+                 x="27"
+                 id="use121" />
+              <use
+                 xlink:href="#dentil"
+                 x="36"
+                 id="use122" />
+              <use
+                 xlink:href="#dentil"
+                 x="45"
+                 id="use123" />
+              <use
+                 xlink:href="#dentil"
+                 x="54"
+                 id="use124" />
+              <use
+                 xlink:href="#dentil"
+                 x="63"
+                 id="use125" />
+              <use
+                 xlink:href="#dentil"
+                 x="72"
+                 id="use126" />
+              <use
+                 xlink:href="#dentil"
+                 x="81"
+                 id="use127" />
+              <use
+                 xlink:href="#dentil"
+                 x="90"
+                 id="use128" />
+              <use
+                 xlink:href="#dentil"
+                 x="99"
+                 id="use129" />
+              <use
+                 xlink:href="#dentil"
+                 x="108"
+                 id="use130" />
+              <use
+                 xlink:href="#dentil"
+                 x="117"
+                 id="use131" />
+              <use
+                 xlink:href="#dentil"
+                 x="126"
+                 id="use132" />
+              <use
+                 xlink:href="#dentil"
+                 x="135"
+                 id="use133" />
+              <use
+                 xlink:href="#dentil"
+                 x="144"
+                 id="use134" />
+              <use
+                 xlink:href="#dentil"
+                 x="153"
+                 id="use135" />
+              <use
+                 xlink:href="#dentil"
+                 x="162"
+                 id="use136" />
+              <use
+                 xlink:href="#dentil"
+                 x="171"
+                 id="use137" />
+            </g>
+            <g
+               transform="translate(583,589)"
+               id="g144">
+              <use
+                 xlink:href="#dentil"
+                 id="use138" />
+              <use
+                 xlink:href="#dentil"
+                 x="9"
+                 id="use139" />
+              <use
+                 xlink:href="#dentil"
+                 x="18"
+                 id="use140" />
+              <use
+                 xlink:href="#dentil"
+                 x="27"
+                 id="use141" />
+              <use
+                 xlink:href="#dentil"
+                 x="36"
+                 id="use142" />
+              <use
+                 xlink:href="#dentil"
+                 x="45"
+                 id="use143" />
+              <use
+                 xlink:href="#dentil"
+                 x="54"
+                 id="use144" />
+            </g>
+            <g
+               transform="rotate(24,-1070.2751,1835.414)"
+               id="g162">
+              <use
+                 xlink:href="#dentil"
+                 id="use145" />
+              <use
+                 xlink:href="#dentil"
+                 x="9"
+                 id="use146" />
+              <use
+                 xlink:href="#dentil"
+                 x="18"
+                 id="use147" />
+              <use
+                 xlink:href="#dentil"
+                 x="27"
+                 id="use148" />
+              <use
+                 xlink:href="#dentil"
+                 x="36"
+                 id="use149" />
+              <use
+                 xlink:href="#dentil"
+                 x="45"
+                 id="use150" />
+              <use
+                 xlink:href="#dentil"
+                 x="54"
+                 id="use151" />
+              <use
+                 xlink:href="#dentil"
+                 x="63"
+                 id="use152" />
+              <use
+                 xlink:href="#dentil"
+                 x="72"
+                 id="use153" />
+              <use
+                 xlink:href="#dentil"
+                 x="81"
+                 id="use154" />
+              <use
+                 xlink:href="#dentil"
+                 x="90"
+                 id="use155" />
+              <use
+                 xlink:href="#dentil"
+                 x="99"
+                 id="use156" />
+              <use
+                 xlink:href="#dentil"
+                 x="108"
+                 id="use157" />
+              <use
+                 xlink:href="#dentil"
+                 x="117"
+                 id="use158" />
+              <use
+                 xlink:href="#dentil"
+                 x="126"
+                 id="use159" />
+              <use
+                 xlink:href="#dentil"
+                 x="135"
+                 id="use160" />
+              <use
+                 xlink:href="#dentil"
+                 x="144"
+                 id="use161" />
+              <use
+                 xlink:href="#dentil"
+                 x="153"
+                 id="use162" />
+            </g>
+          </g>
+        </g>
+        <g
+           id="dome">
+          <g
+             id="dome-shoulder-ornaments">
+            <ellipse
+               cx="535"
+               cy="433"
+               rx="10"
+               ry="5"
+               transform="rotate(-38,535,433)"
+               class="shade outline"
+               id="ellipse162" />
+            <ellipse
+               cx="679"
+               cy="433"
+               rx="10"
+               ry="5"
+               transform="rotate(38,679,433)"
+               class="shade outline"
+               id="ellipse163" />
+          </g>
+          <path
+             id="dome-shell"
+             d="m 491,500 c 9,-48 38,-79 86,-90 q 30,-14 61,-1 c 45,11 72,44 82,91 l -16,19 H 510 Z"
+             fill="url(#dome-metal)"
+             class="outline"
+             style="fill:url(#linearGradient1)" />
+          <path
+             id="dome-left-rim"
+             d="m 493,498 c 12,-42 30,-66 72,-84 l 9,-2 c -40,22 -58,46 -71,90 z"
+             class="stone outline" />
+          <path
+             id="dome-right-rim"
+             d="m 713,500 c -10,-40 -27,-66 -65,-87 l -10,-4 c 41,26 56,50 66,95 z"
+             class="stone outline" />
+          <path
+             id="dome-left-rib"
+             d="m 550,480 c 3,-31 16,-64 37,-73 l 12,-2 c -19,15 -25,46 -25,76 l -2,13 h -23 z"
+             class="stone outline" />
+          <path
+             d="m 561,478 c 4,-36 13,-59 30,-70"
+             class="detail"
+             id="path163" />
+          <path
+             id="dome-right-rib"
+             d="m 640,481 c -1,-32 -8,-61 -25,-76 l 13,2 c 22,14 31,43 35,74 l 1,16 -21,-3 z"
+             class="stone outline" />
+          <path
+             d="m 651,478 c -3,-34 -11,-58 -28,-70"
+             class="detail"
+             id="path164" />
+          <use
+             xlink:href="#oculus"
+             transform="matrix(0.97,0,0,0.97,607,434)"
+             id="use164" />
+          <use
+             xlink:href="#oculus"
+             transform="matrix(0.66276349,0.28132641,-0.33993608,0.80083922,533,451)"
+             id="use165" />
+          <use
+             xlink:href="#oculus"
+             transform="matrix(0.66276349,-0.28132641,0.33993608,0.80083922,682,451)"
+             id="use166" />
+          <g
+             id="dome-window-surrounds">
+            <path
+               id="left-dormer"
+               d="m 499,514 c 1,-18 12,-32 27,-34 9,-1 18,5 25,10 v 67 l -51,21 z"
+               class="stone outline" />
+            <path
+               d="m 500,508 c 12,-26 27,-33 48,-12 v 7 c -20,-17 -32,-12 -43,12 z"
+               class="shade outline"
+               id="path166" />
+            <path
+               d="m 500,499 c 13,-25 29,-30 51,-14 l -1,7 c -20,-14 -35,-9 -48,15 z"
+               class="stone outline"
+               id="path167" />
+            <path
+               id="right-dormer"
+               d="m 665,490 c 11,-11 21,-13 29,-8 13,7 19,19 20,34 l -1,62 -49,-21 z"
+               class="stone outline" />
+            <path
+               d="m 665,496 c 22,-19 37,-10 49,13 l -5,6 c -12,-23 -24,-27 -43,-12 z"
+               class="shade outline"
+               id="path168" />
+            <path
+               d="m 664,485 c 21,-16 39,-10 51,16 l -3,7 c -14,-25 -28,-31 -47,-15 z"
+               class="stone outline"
+               id="path169" />
+            <path
+               id="central-dormer"
+               d="m 573,493 q 2,-19 34,-28 31,9 35,28 v 69 h -69 z"
+               class="stone outline" />
+            <path
+               d="m 575,491 q 9,-19 32,-22 23,3 34,22 l -5,7 q -9,-18 -29,-20 -19,2 -28,20 z"
+               class="shade outline"
+               id="path170" />
+            <path
+               d="m 573,482 q 15,-20 34,-24 20,4 37,24 l -4,7 q -17,-19 -33,-21 -16,2 -31,21 z"
+               class="stone outline"
+               id="path171" />
+            <circle
+               cx="607"
+               cy="457"
+               r="2.0999999"
+               class="stone outline"
+               id="circle171" />
+            <circle
+               cx="530"
+               cy="475"
+               r="2"
+               class="stone outline"
+               id="circle172" />
+            <circle
+               cx="687"
+               cy="475"
+               r="2"
+               class="stone outline"
+               id="circle173" />
+          </g>
+          <g
+             id="dome-windows">
+            <use
+               xlink:href="#arched-window"
+               transform="matrix(0.84,-0.3,0,0.94,511,505)"
+               id="use173" />
+            <use
+               xlink:href="#arched-window"
+               transform="matrix(1.06,0,0,1.04,588,482)"
+               id="use174" />
+            <use
+               xlink:href="#arched-window"
+               transform="matrix(0.8,0.3,0,0.94,673,496)"
+               id="use175" />
+          </g>
+          <g
+             id="dome-pilasters">
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(0.65,-0.22,0,0.83,487,513)"
+               id="use176" />
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(1,-0.08,0,0.9,549,497)"
+               id="use177" />
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(1,0.08,0,0.9,644,495)"
+               id="use178" />
+            <use
+               xlink:href="#pilaster"
+               transform="matrix(0.61,0.23,0,0.84,712,510)"
+               id="use179" />
+            <rect
+               x="574"
+               y="499"
+               width="5"
+               height="56"
+               class="stone outline"
+               id="rect179" />
+            <rect
+               x="636"
+               y="499"
+               width="5"
+               height="56"
+               class="stone outline"
+               id="rect180" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.7,0,0,0.7,577,493)"
+               id="use180" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.7,0,0,0.7,638,493)"
+               id="use181" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,505,507)"
+               id="use182" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,547,494)"
+               id="use183" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,668,494)"
+               id="use184" />
+            <use
+               xlink:href="#scroll-bracket"
+               transform="matrix(0.65,0,0,0.65,709,509)"
+               id="use185" />
+          </g>
+          <g
+             id="dome-finials">
+            <use
+               xlink:href="#roof-finial"
+               transform="matrix(0.72,0,0,0.72,493,495)"
+               id="use186" />
+            <use
+               xlink:href="#roof-finial"
+               transform="matrix(0.72,0,0,0.72,719,495)"
+               id="use187" />
+          </g>
+          <g
+             id="dome-balustrades">
+            <use
+               xlink:href="#balustrade"
+               transform="matrix(0.76,-0.3,0,0.75,503,566)"
+               id="use188" />
+            <use
+               xlink:href="#balustrade"
+               transform="matrix(0.99,0,0,0.8,581,552)"
+               id="use189" />
+            <use
+               xlink:href="#balustrade"
+               transform="matrix(0.74,0.3,0,0.75,670,550)"
+               id="use190" />
+            <polygon
+               points="573,569 541,576 544,551 570,548 "
+               class="stone outline"
+               id="polygon190" />
+            <polygon
+               points="670,576 642,570 645,548 665,551 "
+               class="stone outline"
+               id="polygon191" />
+          </g>
+          <g
+             id="dome-entablature">
+            <polygon
+               points="574,568 641,568 674,575 714,593 708,601 673,585 642,579 574,579 543,577 490,594 490,582 543,565 "
+               class="stone outline"
+               id="polygon192" />
+            <polygon
+               points="574,576 641,576 673,583 703,597 699,604 672,591 641,584 574,584 544,583 496,600 495,592 544,575 "
+               class="navy"
+               id="polygon193" />
+            <g
+               transform="translate(552,579)"
+               id="g203">
+              <use
+                 xlink:href="#dentil"
+                 id="use193" />
+              <use
+                 xlink:href="#dentil"
+                 x="9"
+                 id="use194" />
+              <use
+                 xlink:href="#dentil"
+                 x="18"
+                 id="use195" />
+              <use
+                 xlink:href="#dentil"
+                 x="27"
+                 id="use196" />
+              <use
+                 xlink:href="#dentil"
+                 x="36"
+                 id="use197" />
+              <use
+                 xlink:href="#dentil"
+                 x="45"
+                 id="use198" />
+              <use
+                 xlink:href="#dentil"
+                 x="54"
+                 id="use199" />
+              <use
+                 xlink:href="#dentil"
+                 x="63"
+                 id="use200" />
+              <use
+                 xlink:href="#dentil"
+                 x="72"
+                 id="use201" />
+              <use
+                 xlink:href="#dentil"
+                 x="81"
+                 id="use202" />
+              <use
+                 xlink:href="#dentil"
+                 x="90"
+                 id="use203" />
+            </g>
+            <g
+               transform="rotate(-18,2123.8704,-1314.0066)"
+               id="g207">
+              <use
+                 xlink:href="#dentil"
+                 id="use204" />
+              <use
+                 xlink:href="#dentil"
+                 x="9"
+                 id="use205" />
+              <use
+                 xlink:href="#dentil"
+                 x="18"
+                 id="use206" />
+              <use
+                 xlink:href="#dentil"
+                 x="27"
+                 id="use207" />
+            </g>
+            <g
+               transform="rotate(18,-1514.4586,2349.783)"
+               id="g211">
+              <use
+                 xlink:href="#dentil"
+                 id="use208" />
+              <use
+                 xlink:href="#dentil"
+                 x="9"
+                 id="use209" />
+              <use
+                 xlink:href="#dentil"
+                 x="18"
+                 id="use210" />
+              <use
+                 xlink:href="#dentil"
+                 x="27"
+                 id="use211" />
+            </g>
+            <polyline
+               points="492,601 544,584 574,589 641,589 673,595 701,607"
+               class="detail"
+               id="polyline211" />
+            <path
+               d="m 542,591 26,-3 v 22 l -26,4 z m 102,-2 26,7 v 21 l -25,-7 z"
+               class="stone outline"
+               id="path211" />
+            <rect
+               x="575"
+               y="595"
+               width="62"
+               height="13"
+               class="paper"
+               id="rect211" />
+            <line
+               x1="578"
+               y1="608"
+               x2="633"
+               y2="608"
+               class="detail"
+               id="line211" />
+            <line
+               x1="578"
+               y1="619"
+               x2="627"
+               y2="619"
+               class="detail"
+               id="line212" />
+          </g>
+        </g>
+        <g
+           id="lantern-and-spire">
+          <g
+             id="lantern-base">
+            <path
+               d="m 566,400 q 41,-14 81,-1 v 8 q -40,-10 -81,3 z"
+               class="stone outline"
+               id="path212" />
+            <path
+               d="m 571,406 q 36,-8 72,-2 l -3,9 q -33,-9 -65,2 z"
+               class="navy outline"
+               id="path213" />
+            <path
+               d="m 575,407 q 32,-7 65,-1"
+               class="highlight"
+               id="path214" />
+            <path
+               d="m 576,393 q 31,-9 63,0 l -1,6 q -31,-8 -62,1 z"
+               class="stone outline"
+               id="path215" />
+          </g>
+          <path
+             id="lantern-interior"
+             d="m 577,353 q 30,-13 60,-1 l -1,40 q -29,-8 -58,2 z"
+             class="navy outline" />
+          <path
+             d="m 601,391 v -11 q 6,-8 12,0 v 11 z"
+             class="paper"
+             id="path216" />
+          <g
+             id="lantern-columns"
+             class="stone outline"
+             stroke-width="1.5">
+            <rect
+               x="576"
+               y="359"
+               width="4"
+               height="35"
+               rx="1"
+               id="rect216" />
+            <rect
+               x="589"
+               y="353"
+               width="5"
+               height="39"
+               rx="1"
+               id="rect217" />
+            <rect
+               x="617"
+               y="352"
+               width="5"
+               height="40"
+               rx="1"
+               id="rect218" />
+            <rect
+               x="634"
+               y="357"
+               width="4"
+               height="37"
+               rx="1"
+               id="rect219" />
+          </g>
+          <g
+             class="highlight"
+             id="g220">
+            <line
+               x1="584"
+               y1="369"
+               x2="584"
+               y2="388"
+               id="line219" />
+            <line
+               x1="629"
+               y1="367"
+               x2="629"
+               y2="388"
+               id="line220" />
+          </g>
+          <g
+             id="lantern-cap">
+            <path
+               d="m 577,340 c 4,-19 16,-29 30,-29 15,0 27,11 31,29 l -5,7 h -51 z"
+               fill="url(#dome-metal)"
+               class="outline"
+               id="path220"
+               style="fill:url(#linearGradient2)" />
+            <path
+               d="m 594,332 q 2,-16 13,-20 12,5 15,21"
+               class="highlight"
+               id="path221" />
+            <path
+               d="m 604,332 v -3 q 3,-5 6,0 v 3"
+               class="detail"
+               id="path222" />
+            <ellipse
+               cx="607.5"
+               cy="348"
+               rx="36.5"
+               ry="14.5"
+               class="navy outline"
+               id="ellipse222" />
+            <path
+               d="m 574,348 q 32,-24 68,-1 v 5 q -34,-20 -68,1 z"
+               class="stone outline"
+               id="path223" />
+            <path
+               d="m 577,353 q 30,-17 61,-1 l -1,6 q -30,-16 -58,1 z"
+               class="navy outline"
+               id="path224" />
+            <path
+               d="m 580,355 q 27,-14 56,0"
+               class="highlight"
+               id="path225" />
+          </g>
+          <g
+             id="spire">
+            <path
+               d="m 601,311 1,-6 2,-3 -2,-5 3,-5 -1,-5 q -7,-3 -2,-7 h 3 l 2,-7 -1,-5 3,-14 2,14 -1,6 3,6 q 6,-2 4,4 l -6,4 2,6 -2,4 3,8 v 5 z"
+               class="shade outline"
+               id="path226" />
+            <line
+               x1="608"
+               y1="263"
+               x2="609"
+               y2="280"
+               class="highlight"
+               id="line226" />
+            <circle
+               cx="608.5"
+               cy="283.5"
+               r="2.4000001"
+               class="paper"
+               id="circle226" />
+            <line
+               x1="604"
+               y1="298"
+               x2="611"
+               y2="298"
+               class="detail"
+               id="line227" />
+            <line
+               x1="603"
+               y1="305"
+               x2="613"
+               y2="305"
+               class="detail"
+               id="line228" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gold-orbit">
+      <path
+         id="orbit-distant-tip"
+         d="m 769,316 q 60,-29 118,-36 l 16,3 q -63,8 -134,33 z"
+         fill="url(#gold-star)"
+         style="fill:url(#linearGradient3)" />
+      <path
+         id="four-point-star"
+         d="m 938,195 c -4,54 -10,65 -69,73 56,5 65,14 69,71 6,-55 12,-65 69,-71 -57,-5 -63,-17 -69,-73 z"
+         fill="url(#gold-star)"
+         style="fill:url(#linearGradient4)" />
+      <use
+         id="orbit-front"
+         xlink:href="#orbit-ribbon"
+         fill="url(#gold-ribbon)"
+         style="fill:url(#gold-ribbon)" />
+    </g>
+  </g>
+  <!-- LIVE TYPE: edit the words here. No letter has been converted to outlines.
+       Times New Roman is preferred, with metrically similar serif fallbacks.
+       Ordinary tracking and one horizontal text transform keep the layout
+       consistent in renderers that do not implement SVG textLength. -->
+</svg>
