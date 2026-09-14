@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "lighthouse": "npx --yes @lhci/cli@0.15.1 autorun",
     "format:styles": "prettier --write \"src/styles/**/*.scss\"",
     "check:styles": "prettier --check \"src/styles/**/*.scss\""
   },

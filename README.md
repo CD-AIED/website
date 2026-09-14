@@ -23,7 +23,10 @@ Useful commands:
 npm run check    # Validate Astro and TypeScript files
 npm run build    # Create the production site in dist/
 npm run preview  # Preview the production build
+npm run lighthouse # Audit the production build with Lighthouse CI
 ```
+
+Run `npm run build` before `npm run lighthouse` locally. The Lighthouse workflow does this automatically on pushes and pull requests, and stores the reports as workflow artifacts.
 
 ## Write an article
 
@@ -92,6 +95,8 @@ Keep article images beside the Markdown file, commit them to Git, and use a rela
 ```
 
 Local images inside `src/` are handled by Astro's image pipeline. Relative paths avoid hardcoding the GitHub Pages base path. Files in `public/` are copied without optimization; URLs to them must include `/website/` for this deployment.
+
+Article covers and researcher photos are automatically emitted as responsive size variants during the build. Article covers also get AVIF and WebP sources, so browsers choose an appropriate format and download size without manually exporting mobile versions.
 
 ## Homepage content
 

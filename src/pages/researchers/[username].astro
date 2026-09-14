@@ -19,7 +19,7 @@ const articles = (await getPublishedArticles()).filter((article) => article.data
   <article class="profile">
     <header class="profile-header">
       <div class="portrait">
-        <Image src={researcherPhoto(username)} alt="" width={480} loading="eager" />
+        <Image src={researcherPhoto(username)} alt="" width={480} widths={[192, 320, 480]} sizes="12rem" loading="eager" />
       </div>
       <div>
         <h1>{fullName(person)}</h1>

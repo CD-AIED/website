@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import AuthorList from './AuthorList.astro';
 import { type Article, getReadingTime } from '../lib/articles';
 import { getArticleAuthors } from '../lib/researchers';
@@ -16,13 +16,15 @@ const authors = await getArticleAuthors(article);
 ---
 <article class="article-card">
   {cover && (
-    <Image
+    <Picture
       class="card-cover"
       src={cover}
       alt={coverAlt ?? ''}
       width={768}
-      widths={[480, 768, 1152, 1536]}
+      widths={[320, 480, 768, 1152]}
       sizes="(max-width: 600px) calc(100vw - 2rem), (max-width: 816px) calc(100vw - 3rem), 768px"
+      formats={['avif', 'webp']}
+      fallbackFormat="webp"
       loading="lazy"
     />
   )}
