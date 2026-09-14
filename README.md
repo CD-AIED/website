@@ -119,7 +119,9 @@ Focus the list to use Left/Right, Home, and End. Tab reaches individual profile 
 
 Navigation uses lists of real links, with visible focus rings, a skip link, and natural tab order. Keep descriptive link text, alt text, and readable contrast when adding content.
 
-Article lists stack vertically in a centered, 48rem-wide column on the homepage, archive, and researcher profiles. Each card has a compact cover, a left-aligned title, and its date and authors below the description. The homepage shows the latest three; the archive and researcher profiles list all matching published articles. Pagination is not implemented yet.
+Article lists stack vertically in a centered, 48rem-wide column on the homepage and researcher profiles. Each card has a compact cover, a left-aligned title, and its date and authors below the description. The homepage shows the latest three, while researcher profiles list all matching published articles.
+
+The article feed is available at [`/website/rss.xml`](https://cd-aied.github.io/website/rss.xml). It is generated as a static file during the Astro build and works on GitHub Pages.
 
 ## Publish
 
@@ -142,7 +144,7 @@ src/styles/
   base/                  # Palette, typography, element defaults, accessibility
   layout/                # Site header/footer and shared section layouts
   components/            # Cards, portraits, carousel, sponsors, Markdown prose
-  pages/                 # Home, team, researcher, article, archive, and 404
+  pages/                 # Home, team, researcher, article, and 404
 ```
 
 Keep each declaration on its own line, use shallow nesting, and keep responsive and print rules beside the styles they affect. Add page-specific styling under `pages/` and reusable component styling under `components/`, then load new partials from `main.scss`.
