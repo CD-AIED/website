@@ -1,143 +1,139 @@
 [
   {
-    "title": "Parametric Editorial Generation for Competitive Programming: A Human-in-the-Loop Working Prototype",
-    "authors": "T Moroianu, AM Dumitran, TV Nakajima, A Miclaus, MA Vasilut, L Marin",
-    "venue": "Impactful and Responsible AI Systems for Education, 187–193",
-    "year": 2026
-  },
-  {
-    "title": "Programming Language Policy as an AI Literacy Equity Problem: A 15-Nation Comparative Analysis",
-    "authors": "AM Dumitran, IM Popescu",
-    "venue": "arXiv preprint arXiv:2607.11314",
-    "year": 2026
-  },
-  {
-    "title": "The Paternalistic Filter: Epistemic Injustice and Differential Refusal in LLM-Mediated History Education for Marginalized Romanian Students",
-    "authors": "A Popovici, A Ionascu, AM Dumitran",
-    "venue": "arXiv preprint arXiv:2607.11292",
-    "year": 2026
-  },
-  {
-    "title": "Automated Textbook Auditing with Multi-Agent LLM Systems",
-    "authors": "C Cristescu, AM Dumitran, AL Dumitran, G Stefan",
-    "venue": "arXiv preprint arXiv:2607.11276",
-    "year": 2026
-  },
-  {
-    "title": "A Two-Validator Web Interface for Structured Geometry Figure Annotation",
-    "authors": "SC Badea, AM Dumitran",
-    "venue": "Proceedings of the Impactful and Responsible AI Systems for Education …",
-    "year": 2026
-  },
-  {
-    "title": "Block-Based Pathfinding: A Minecraft System for Visualizing Graph Algorithms",
-    "authors": "LS Pirvu, BA Maciuca, AC Rabu, AM Dumitran",
-    "venue": "Proceedings of the 18th International Conference on Computer Supported …",
+    "title": "RoMathExam: A Longitudinal Dataset of Romanian Math Exams (1895-2025) with a Seven-Decade Core (1957-2025)",
+    "authors": "LN Cuclea, SC Badea, AM Dumitran",
+    "venue": "AIED 2026 (27th International Conference on Artificial Intelligence in Education), Seoul, Korea. Springer LNAI 16582, vol. 2, pp. 64-78",
     "year": 2026
   },
   {
     "title": "MuTSE: A Human-in-the-Loop Multi-use Text Simplification Evaluator",
     "authors": "RA Roscan, G Petre, AM Dumitran, AL Dumitran",
-    "venue": "ITS 2026, arXiv preprint arXiv:2604.08947",
+    "venue": "ITS 2026 (International Conference on Intelligent Tutoring Systems). arXiv:2604.08947",
     "year": 2026
   },
   {
     "title": "An Agentic Evaluation Architecture for Historical Bias Detection in Educational Textbooks",
     "authors": "G Stefan, AM Dumitran",
-    "venue": "ITS 2026, arXiv preprint arXiv:2604.07883",
-    "year": 2026
-  },
-  {
-    "title": "RoMathExam: A Longitudinal Dataset of Romanian Math Exams (1895-2025) with a Seven-Decade Core (1957-2025)",
-    "authors": "LN Cuclea, SC Badea, AM Dumitran",
-    "venue": "AIED Artificial Intelligence In Education 27 (LNAI 16582), vol2 pp. 64–78, 2027",
+    "venue": "ITS 2026 (International Conference on Intelligent Tutoring Systems). arXiv:2604.07883",
     "year": 2026
   },
   {
     "title": "BacPrep: Lessons from Deploying an LLM-Based Bacalaureat Assessment Platform",
-    "authors": "AM Dumitran, R Dita, A Liliana Dumitran",
-    "venue": "ITS 2026, arXiv: 2506.04989",
+    "authors": "AM Dumitran, R Dita, AL Dumitran",
+    "venue": "ITS 2026 (International Conference on Intelligent Tutoring Systems)",
     "year": 2026
   },
   {
-    "title": "RoMathExam Dataset",
-    "authors": "SC Badea, LN Cuclea, AM Dumitran",
-    "venue": "https://doi.org/10.5281/zenodo.19255512",
-    "year": 2026,
-    "url": "https://doi.org/10.5281/zenodo.19255512"
-  },
-  {
-    "title": "RoBiologyDataChoiceQA: A Romanian Dataset for improving Biology understanding of Large Language Models",
-    "authors": "DD Ghinea, AN Corbeanu, MA Dumitran",
-    "venue": "Proceedings of the 5th Workshop on Multilingual Representation Learning (MRL …",
-    "year": 2025
-  },
-  {
-    "title": "DO LLMS UNDERSTAND ROMANIAN DRIVING LAWS? A STUDY ON MULTIMODAL AND FINE-TUNED QUESTION ANSWERING",
-    "authors": "E BARBU, AM DUMITRAN",
-    "venue": "ConsILR 2025 (Proceedings of the 20th ConsILR), 222–232",
-    "year": 2025
-  },
-  {
-    "title": "A CROSS-LINGUAL ANALYSIS OF BIAS IN LARGE LANGUAGE MODELS USING ROMANIAN HISTORY",
-    "authors": "MI COCU, RC CRISTIA, AM DUMITRAN",
-    "venue": "Consilr 2025 (Proceedings of the 20th ConsILR), 185–198",
-    "year": 2025
-  },
-  {
-    "title": "GRILE: A Benchmark for Grammar Reasoning and Explanation in Romanian LLMs",
-    "authors": "M Dumitran, A Dumitran, AM Danila",
-    "venue": "Proceedings of the 15th International Conference on Recent Advances in …",
-    "year": 2025
-  },
-  {
-    "title": "A Culturally-Rich Romanian NLP Dataset from \"Who Wants to Be a Millionaire?\" Videos",
-    "authors": "A Ganea, AA Popovici, M Dumitran",
-    "venue": "Proceedings of the 15th International Conference on Recent Advances in …",
+    "title": "From Struggle (06-2024) to Mastery (02-2025): LLMs Conquer Advanced Algorithm Exams and Pave the Way for Editorial Generation",
+    "authors": "AM Dumitran, TP Moroianu, VP Alexe",
+    "venue": "ITS 2025 (21st International Conference on Intelligent Tutoring Systems), Alexandroupolis, Greece, pp. 32-46",
     "year": 2025
   },
   {
     "title": "MateInfoUB: A Real-World Benchmark for Testing LLMs in Competitive, Multilingual, and Multimodal Educational Tasks",
-    "authors": "M Dumitran, TP Moroianu, MV Buca",
-    "venue": "Proceedings of the 20th Workshop on Innovative Use of NLP for Building …",
+    "authors": "AM Dumitran, TP Moroianu, MV Buca",
+    "venue": "BEA 2025 (20th Workshop on Innovative Use of NLP for Building Educational Applications) @ ACL",
     "year": 2025
   },
   {
     "title": "Leveraging Generative AI for Enhancing Automated Assessment in Programming Education Contests",
-    "authors": "S Dascalescu, M Dumitran, MA Vasiluta",
-    "venue": "Proceedings of the 20th Workshop on Innovative Use of NLP for Building …",
+    "authors": "SC Dascalescu, AM Dumitran, MA Vasiluta",
+    "venue": "BEA 2025 (20th Workshop on Innovative Use of NLP for Building Educational Applications) @ ACL",
+    "year": 2025
+  },
+  {
+    "title": "Block-Based Pathfinding: A Minecraft System for Visualizing Graph Algorithms",
+    "authors": "LS Pirvu, BA Maciuca, AC Rabu, AM Dumitran",
+    "venue": "CSEDU 2026 (18th International Conference on Computer Supported Education) [TBC]",
+    "year": 2026
+  },
+  {
+    "title": "Parametric Editorial Generation for Competitive Programming: A Human-in-the-Loop Working Prototype",
+    "authors": "T Moroianu, AM Dumitran, TV Nakajima, A Miclaus, SC Dascalescu, MA Vasiluta, L Marin",
+    "venue": "IRAISE 2026 (Impactful and Responsible AI Systems for Education Workshop) @ AIED 2026, PMLR 339:187-193",
+    "year": 2026,
+    "url": "https://proceedings.mlr.press/v339/moroianu26a.html"
+  },
+  {
+    "title": "A Two-Validator Web Interface for Structured Geometry Figure Annotation",
+    "authors": "SC Badea, AM Dumitran",
+    "venue": "IRAISE 2026 (Impactful and Responsible AI Systems for Education Workshop) @ AIED 2026, PMLR 339:107-111",
+    "year": 2026,
+    "url": "https://proceedings.mlr.press/v339/badea26a.html"
+  },
+  {
+    "title": "Automated Textbook Auditing with Multi-Agent LLM Systems",
+    "authors": "C Cristescu, AM Dumitran, AL Dumitran, G Stefan",
+    "venue": "iTextbooks 2026 (7th International Workshop on Intelligent Textbooks) @ AIED 2026, CEUR-WS Vol-4231. arXiv:2607.11276",
+    "year": 2026,
+    "url": "https://ceur-ws.org/Vol-4231/itb26_s3s3.pdf"
+  },
+  {
+    "title": "Programming Language Policy as an AI Literacy Equity Problem: A 15-Nation Comparative Analysis",
+    "authors": "AM Dumitran, IM Popescu",
+    "venue": "AIED 2026 Workshop ALIT4ALL. arXiv:2607.11314",
+    "year": 2026
+  },
+  {
+    "title": "RoBiologyDataChoiceQA: A Romanian Dataset for Improving Biology Understanding of Large Language Models",
+    "authors": "DD Ghinea, AN Corbeanu, AM Dumitran",
+    "venue": "MRL 2025 (5th Workshop on Multilingual Representation Learning) @ EMNLP",
+    "year": 2025
+  },
+  {
+    "title": "GRILE: A Benchmark for Grammar Reasoning and Explanation in Romanian LLMs",
+    "authors": "AM Dumitran, AL Dumitran, AM Danila",
+    "venue": "RANLP 2025 (15th International Conference on Recent Advances in Natural Language Processing). arXiv:2508.14279",
+    "year": 2025
+  },
+  {
+    "title": "A Culturally-Rich Romanian NLP Dataset from \"Who Wants to Be a Millionaire?\" Videos",
+    "authors": "A Ganea, AA Popovici, AM Dumitran",
+    "venue": "RANLP 2025 (15th International Conference on Recent Advances in Natural Language Processing)",
+    "year": 2025
+  },
+  {
+    "title": "Do LLMs Understand Romanian Driving Laws? A Study on Multimodal and Fine-Tuned Question Answering",
+    "authors": "E Barbu, AM Dumitran",
+    "venue": "ConsILR 2025 (20th International Conference on Linguistic Resources and Tools for Natural Language Processing), pp. 222-232. arXiv:2509.23715",
     "year": 2025
   },
   {
     "title": "BacPrep: An Experimental Platform for Evaluating LLM-Based Bacalaureat Assessment",
-    "authors": "DA Marius, D Radu",
-    "venue": "2nd International Workshop on Breaking Barriers with Generative Intelligence …",
+    "authors": "AM Dumitran, R Dita",
+    "venue": "BBGI'25 (2nd International Workshop on Breaking Barriers with Generative Intelligence) @ ITS 2025, Springer CCIS. arXiv:2506.04989",
     "year": 2025
   },
   {
-    "title": "From Struggle (06-2024) to Mastery (02-2025) LLMs Conquer Advanced Algorithm Exams and Pave the Way for Editorial Generation",
-    "authors": "AM Dumitran, TP Moroianu, VP Alexe",
-    "venue": "International Conference on Intelligent Tutoring Systems, 32–46",
+    "title": "A Cross-Lingual Analysis of Bias in Large Language Models Using Romanian History",
+    "authors": "MI Cocu, RC Cristia, AM Dumitran",
+    "venue": "ConsILR 2025 (20th International Conference on Linguistic Resources and Tools for Natural Language Processing), pp. 185-198",
     "year": 2025
   },
   {
-    "title": "RoBiologyDataChoiceQA (DATASET): A Romanian Dataset for improving Biology understanding of Large Language Models",
+    "title": "Exploring Large Language Models for Translating Romanian Computational Problems into English",
+    "authors": "AM Dumitran, AC Badea, SG Muscalu, AL Dumitran, SC Dascalescu, et al.",
+    "venue": "ConsILR 2024 (19th International Conference on Linguistic Resources and Tools for Natural Language Processing) [YEAR TBC]",
+    "year": 2024
+  },
+  {
+    "title": "Evaluating the Performance of Large Language Models in Competitive Programming: A Multi-Year, Multi-Grade Analysis",
+    "authors": "AM Dumitran, AC Badea, SG Muscalu",
+    "venue": "INISTA 2024 (International Conference on Innovations in Intelligent Systems and Applications)",
+    "year": 2024
+  },
+  {
+    "title": "RoMathExam Dataset",
+    "authors": "SC Badea, LN Cuclea, AM Dumitran",
+    "venue": "Zenodo, doi:10.5281/zenodo.19255512",
+    "year": 2026,
+    "url": "https://doi.org/10.5281/zenodo.19255512"
+  },
+  {
+    "title": "RoBiologyDataChoiceQA (Dataset): A Romanian Dataset for Improving Biology Understanding of Large Language Models",
     "authors": "DD Ghinea, AN Corbeanu, AM Dumitran",
-    "venue": "https://zenodo.org/records/19610721",
+    "venue": "Zenodo",
     "year": 2025,
     "url": "https://zenodo.org/records/19610721"
-  },
-  {
-    "title": "Exploring large language models for translating romanian computational problems into english",
-    "authors": "AM Dumitran, AC Badea, SG Muscalu, AL Dumitran, SC Dascalescu, ...",
-    "venue": "19th International Conference on Linguistic Resources and Tools for Natural …",
-    "year": 2025
-  },
-  {
-    "title": "Evaluating the performance of large language models in competitive programming: A multi-year, multi-grade analysis",
-    "authors": "AM Dumitran, AC Badea, SG Muscalu",
-    "venue": "2024 International Conference on INnovations in Intelligent SysTems and …",
-    "year": 2024
   }
 ]
-
