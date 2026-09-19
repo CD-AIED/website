@@ -1,0 +1,81 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/mixins";
+
+.publication-count {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.publication-list {
+  @include mixins.unstyled-list;
+
+  max-height: 34rem;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
+  border-block: 1px solid var(--line);
+
+  @media print {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+.publication-entry {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1.5rem;
+  min-height: 11rem;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--line);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  h3 {
+    max-width: 55rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    min-height: 0;
+    padding: 1.25rem 0.5rem;
+  }
+}
+
+.publication-year {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.publication-authors {
+  color: var(--ink);
+}
+
+.publication-venue {
+  color: var(--muted);
+  font-style: italic;
+}
