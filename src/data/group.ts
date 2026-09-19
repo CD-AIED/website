@@ -28,8 +28,6 @@ export interface Project {
 }
 export const projects: Project[] = [];
 
-export const publications: Publication[] = [];
-
 export interface Publication {
   title: string;
   authors: string;
