@@ -6,8 +6,8 @@ export const group = {
   outlook: 'Our group starts in Bucharest. As we grow, we hope to welcome collaborators from other institutions and disciplines.',
   interests: [
     { title: 'Datasets & automated assessment', description: 'We build evaluation datasets from real exams — Bacalaureat, licensing tests, subject exams in mathematics, grammar, biology and history — and study how well automated systems can grade and answer them.' },
-    { title: 'Competitive programming', description: 'We design agentic systems that audit educational material and the models that deliver it, checking grammatical correctness, factual accuracy, consistency and bias, while human experts keep control of the verdict — including how models answer differently for different students.' },
-    { title: 'Expert-in-the-loop auditing', description: 'Asking how AI systems can be useful, understandable, and responsive to human needs.' },
+    { title: 'Competitive programming', description: 'We generate problems, tests and editorials for programming contests, and use olympiad problems to study machine algorithmic reasoning' },
+    { title: 'Expert-in-the-loop auditing', description: 'We design agentic systems that audit educational material and the models that deliver it, checking grammatical correctness, factual accuracy, consistency and bias, while human experts keep control of the verdict — including how models answer differently for different students.' },
   ],
 };
 
