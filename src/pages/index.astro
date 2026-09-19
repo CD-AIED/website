@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TeamCarousel from '../components/TeamCarousel.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import { group, sponsors } from '../data/group';
+import { group, publications, sponsors } from '../data/group';
 import { getResearchers } from '../lib/researchers';
 import { getPublishedArticles } from '../lib/articles';
 
@@ -41,6 +41,25 @@ const articles = await getPublishedArticles();
   </section>
 
   <TeamCarousel people={people} />
+
+  <section id="publications" class="section publications" aria-labelledby="publications-heading">
+    <header class="section-heading">
+      <div><p class="label">Research output</p><h2 id="publications-heading">Publications</h2></div>
+      <p class="publication-count">{publications.length} entries · Scroll to explore</p>
+    </header>
+    <ol class="publication-list" role="list" tabindex="0" aria-label="Publications, scroll to see more">
+      {publications.map((publication) => (
+        <li class="publication-entry">
+          <span class="publication-year">{publication.year}</span>
+          <div>
+            <h3>{publication.url ? <a href={publication.url}>{publication.title}</a> : publication.title}</h3>
+            <p class="publication-authors">{publication.authors}</p>
+            <p class="publication-venue">{publication.venue}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
 
   <section id="sponsors" class="section sponsors" aria-labelledby="sponsors-heading">
     <header class="section-heading">

@@ -100,7 +100,7 @@ Article covers and researcher photos are automatically emitted as responsive siz
 
 ## Homepage content
 
-Edit **`src/data/group.ts`** for the welcome text, research interests, projects, publications, and sponsors.
+Edit **`src/data/group.ts`** for the welcome text, research interests, projects, and sponsors.
 
 For sponsor logos, import local assets and add entries such as:
 
@@ -114,7 +114,11 @@ export const sponsors: Sponsor[] = [
 
 Use the actual sponsor name for accessibility. Logos preserve their aspect ratios and wrap on smaller screens.
 
-Projects accept `title`, `description`, and an optional `url`. Publications accept `title`, `authors` (display text), `venue`, `year`, `url`, and an optional `abstract`. The homepage shows the five most recent publications, sorted by year. Abstracts use native `details`/`summary` controls. Both lists start empty.
+Projects accept `title`, `description`, and an optional `url`. The projects list starts empty.
+
+## Publications
+
+Edit **`src/data/publications.json`** to add or correct publications. This file is the source of truth for the homepage list. Put the newest entries first. Each entry has a `title`, `authors`, `venue` (the publication or dataset citation), and numeric `year`; add `url` only when there is a verified destination for the title link. The list is scrollable and shows roughly three entries at a time. Do not edit the homepage markup for routine publication updates.
 
 ## Keyboard and mobile behaviour
 

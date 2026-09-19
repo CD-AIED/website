@@ -1,5 +1,6 @@
 import type { ImageMetadata } from 'astro';
 import togetherAiLogo from '../assets/images/sponsors/together-ai.svg';
+import publicationData from './publications.json';
 
 export const group = {
   introduction: 'We’re a newly formed group of researchers from the University of Bucharest. We bring our questions, ideas, and different perspectives to a shared research space.',
@@ -32,7 +33,7 @@ export interface Publication {
   authors: string;
   venue: string;
   year: number;
-  url: string;
-  abstract?: string;
+  url?: string;
 }
-export const publications: Publication[] = [];
+export const publications: Publication[] = publicationData;
+
