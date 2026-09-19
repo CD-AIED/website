@@ -5,9 +5,9 @@ export const group = {
   introduction: 'We’re a newly formed group of researchers from the University of Bucharest. We bring our questions, ideas, and different perspectives to a shared research space.',
   outlook: 'Our group starts in Bucharest. As we grow, we hope to welcome collaborators from other institutions and disciplines.',
   interests: [
-    { title: 'AI & education', description: 'Exploring how artificial intelligence can support teaching, learning, and the people involved.' },
-    { title: 'Language & understanding', description: 'Studying language technologies and how we can better understand and evaluate them.' },
-    { title: 'Human-centred AI', description: 'Asking how AI systems can be useful, understandable, and responsive to human needs.' },
+    { title: 'Datasets & automated assessment', description: 'We build evaluation datasets from real exams — Bacalaureat, licensing tests, subject exams in mathematics, grammar, biology and history — and study how well automated systems can grade and answer them.' },
+    { title: 'Competitive programming', description: 'We design agentic systems that audit educational material and the models that deliver it, checking grammatical correctness, factual accuracy, consistency and bias, while human experts keep control of the verdict — including how models answer differently for different students.' },
+    { title: 'Expert-in-the-loop auditing', description: 'Asking how AI systems can be useful, understandable, and responsive to human needs.' },
   ],
 };
 
